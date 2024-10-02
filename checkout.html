@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+        <!-- Bootscrap Link -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <!-- Bootscrap Link -->
+          
+        
+        <!--Fontawesome link  -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+            integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+           crossorigin="anonymous" referrerpolicy="no-referrer" />
+           <!--Fontawesome link  -->
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=Playpen+Sans:wght@500&display=swap"
+    
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=Playpen+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.checkout-wrapper{
+    height: 100vh;
+}
+
+.left-cnt{
+    left: 0;
+    width: 50%;
+    height: 100vh;
+    background-color: orangered;
+    position: relative;
+
+}
+
+.right-cnt{
+    right: 0;
+    width: 50%;
+    position: relative;
+    height: 100vh;
+    background-color: #ddd;
+}
+
+.header-wrapper{
+   margin-left: 14rem;
+    position: absolute;
+}
+
+.header-wrapper h1{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-size: 2rem;
+    text-shadow: 0.1rem 0.1rem 0.2rem #000;
+}
+
+.header-wrapper p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #fff;
+    margin-left: -1.5rem;
+    font-weight: 600;
+    text-shadow: 0.1rem 0.1rem 0.2rem #000;
+
+}
+
+.order-summary{
+    position: relative;
+}
+
+.order-summary span{
+    color: #fff;
+    position: absolute;
+}
+
+.card-billing{
+    width: 40rem;
+    height: 35rem;
+    margin-top: 2rem;
+    position: relative;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(196, 76, 6, 0.6));
+    opacity: .9;
+    box-shadow: 0.1rem 0.1rem 0.4rem #000;
+}
+
+.billing-header{
+    margin-top: 3rem;
+    position: absolute;
+    margin-left: 3rem;
+}
+
+.billing-header h3{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0.1rem 0.1rem 0.4rem #000;
+
+}
+
+.left-input-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    position: absolute;
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
+
+.left-input-wrapper input{
+    margin-top: 1.5rem;
+    padding-left: 0.7rem;
+    background: transparent;
+    height: 2.3rem;
+    outline: none;
+    border: 0.1rem solid #fff;
+    font-size: 1rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.left-input-wrapper input:focus{
+    border: 0.2rem solid orangered;
+}
+
+.left-input-wrapper input::placeholder{
+    color: #fff;
+}
+
+.left-input-wrapper address{
+    margin-top: 1.4rem;
+
+}
+
+.left-input-wrapper  textarea{
+    width: 14rem;
+    height: 10rem;
+    resize: none;
+    margin-bottom: 1rem;
+    padding-left: 0.7rem;
+    outline: none;
+    background: transparent;
+    border: 0.1rem solid #fff;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+
+}
+
+.left-input-wrapper  textarea:focus{
+    border: 0.2rem solid orangered;
+}
+
+.left-input-wrapper  textarea::placeholder{
+    color: #fff;
+}
+
+
+.input_last{
+    margin-top: -2rem;
+}
+
+.input_last input{
+    width: 14rem;
+
+}
+
+.right-payment-content{
+    right: 1rem;
+    position: absolute;
+    float: right;
+    margin-top: 0.4rem;
+}
+
+ .payment-inputs {
+    right: -2rem;
+}
+
+.payment-inputs input{
+  display: block;
+  width: 14rem;
+  height: 2.3rem;
+  border: 0.1rem solid #fff;
+  margin-top: 1.5rem;
+  color: #fff;
+  font-size: 1rem;
+  background: transparent;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 0.7rem;
+  outline: none;
+}
+
+.payment-inputs input:focus{
+    border: 0.2rem solid orangered;
+}
+
+.payment-header h2{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0.1rem 0.1rem 0.4rem #000;
+}
+
+.payment-inputs input::placeholder{
+    color: #fff ;
+}
+
+
+
+.payment-logos img{
+    width: 5rem;
+    height: 3rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem #000;
+}
+
+.confirm-address-biling{
+    display: flex;
+}
+
+.confirm-address-biling p{
+    margin-top: 0.9rem;
+    margin-left: 0.2rem;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#payment-button{
+    width: 14rem;
+    height: 3rem;
+    position: relative;
+ 
+}
+
+#payment-button button{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(223, 92, 44);
+    color: #fff;
+    font-size: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+    box-shadow: 0.1rem 0.1rem 0.3rem #000;
+    cursor: pointer;
+}
+
+#payment-button button:hover{
+    background-color: orangered;
+}
+
+.payment-header{
+    margin-top: 3rem;
+}
+
+.payment-header p{
+   color: #fff;
+   font-size: 1.2rem;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.banner-payment_img{
+    width: 9rem;
+    height: 9rem;
+    position: relative;
+    margin-top: 8rem;
+    display: flex;
+    margin-left: 7rem;
+}
+
+.banner-payment_img img{
+    /* position: absolute; */
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-left: 3rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem #000;
+}
+
+
+
+
+
+
+/* SMALLER SCREENS SECTION START */
+
+@media screen and (max-width: 1340px){
+/* .right-payment-content{
+      background-color: aqua;
+   } */
+
+   .card-billing{
+    width: 35rem;
+    height: 35rem;
+   }
+
+.right-payment-content{
+    right: 1.3rem;
+    position: absolute;
+    float: right;
+    margin-top: 0.4rem;
+}
+
+.payment-logos img{
+    width: 4rem;
+    height: 2rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem #000;
+}
+
+}
+
+/* screens max of 1200px start */
+@media screen and (max-width: 1200px){
+
+/* .right-payment-content{
+        background-color: red;
+     } */
+
+     .card-billing{
+    width: 30rem;
+    height: 35rem;
+   }
+
+ .left-input-wrapper
+ {
+    width: 12rem; 
+     }
+
+.left-input-wrapper input{
+   font-size: 0.8rem;
+}
+  
+     .input_last input{
+        width: 12rem;
+     }
+
+    .left-input-wrapper  textarea{
+    width: 12rem;
+    font-size: 0.8rem;
+}
+
+.right-payment-content{
+    right: 1rem;
+    margin-top: 0.4rem;
+}
+
+.payment-inputs input{
+  display: block;
+  width: 12rem;
+}
+
+
+#payment-button{
+    width: 12rem;
+    height: 3rem;
+    position: relative;
+ 
+}
+
+.banner-payment_img{
+    margin-left: 5rem;
+}
+
+}
+
+
+
+    /* SCREEN WIDTH OF 995PX START */
+
+@media screen and (max-width: 995px) {
+
+/* .right-payment-content{
+   background-color: yellow;
+   } */
+
+   .left-cnt{
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    background-color: orangered;
+    position: relative;
+
+}
+
+.right-cnt{
+    left: 0;
+    width: 100%;
+    position: relative;
+    height: 87vh;
+    background-color: #ddd;
+}
+
+.card-billing{
+    width: 30rem;
+    height: 31rem;
+    margin-left: 13rem;
+   }
+
+   
+.billing-header h3{
+    font-size: 1rem;
+    margin-top: -1.8rem;
+}
+   
+.left-input-wrapper input{
+    margin-top: 1rem;
+  
+
+}
+
+.left-input-wrapper{
+    margin-top: 3rem;
+}
+
+.right-payment-content{
+    margin-top: -1.7rem;
+}
+
+.left-cnt .header-wrapper{
+    margin-left: 20rem;
+}
+
+.header-wrapper h1{
+    font-size: 1.8rem;
+}
+.banner-payment_img{
+    margin-left: 12rem;
+}
+
+}
+
+@media screen and (max-width: 768px){
+   
+/* .right-payment-content{
+      background-color: blue;
+   } */
+
+   .left-cnt .header-wrapper{
+    margin-left: 15rem;
+}
+
+.header-wrapper h1{
+    font-size: 1.5rem;
+}
+.banner-payment_img{
+    margin-left: 8rem;
+}
+
+
+.right-cnt{
+    height: 85vh;
+}
+
+.card-billing{
+    margin-left: 5rem;
+    height: 31rem;
+   }
+
+}  
+
+/* SCREEN OF MAX-WIDTH 590PX START */
+@media screen and (max-width:590px){
+/* .right-payment-content{
+   background-color:  forestgreen;
+} */
+
+
+.left-cnt .header-wrapper{
+    margin-left: 10rem;
+}
+
+.header-wrapper h1{
+    font-size: 1.5rem;
+}
+.banner-payment_img{
+    margin-left: 1rem;
+}
+
+
+.card-billing{
+    margin-left: 0.5rem;
+    height: 31rem;
+    width: 28rem;
+   }
+
+   .right-payment-content{
+    right: 0.4rem;
+
+}
+
+.left-input-wrapper{
+    margin-left: 0.2rem;
+}
+
+.billing-header h3{
+    margin-left: -2rem;
+}
+}
+/* SMALLER SCREENS SECTION END */
+
+
+
+.shipping-wrapper{
+    display: flex;
+    margin: 7rem 8rem;
+}
+
+.shipping-wrapper i{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.shipping-wrapper p{
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 0.8rem;
+    
+}
+
+.shipping-new_customer{
+    margin-top: -7rem;
+    margin-left: 8rem;
+}
+
+.shipping-new_customer span{
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+    
+}
+
+.checkout-preloader
+{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    opacity: .7;
+    z-index: 2000;
+    /* left: 0;
+    top: 0; */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    display: flex;
+}
+
+
+</style>
+<body>
+
+    <div class="container-fluid checkout-wrapper">
+        <div class="checkout-preloader">
+               <img src="./Pictures/chckoutgif.gif" alt="">
+        </div>
+
+        <div class="row">
+            <div class="left-cnt col-lg-6 col-md-6 col-sm-12">
+                 <div class="header-wrapper">
+                    <h1>ClothMart</h1>
+                    <p>Shop Smart With Clothmart</p>
+                 </div>
+
+                 <div class="banner-payment_img">
+             <img src="./Pictures/account-banner.jpeg" alt="">
+             <img src="./Pictures/men orange cncts.jpg" alt="">
+                 </div>
+
+                 <div class="shipping-wrapper">
+                    <i class="fa-solid fa-truck"></i><p>Delivery takes up to 7 working days.</p>
+                    <br>
+                 </div>
+                 <div class="shipping-new_customer">
+                    <span>Free Delivery on Your First Purchase!</span>
+
+                 </div>
+
+                 <div class="products-checkout">
+
+
+                 </div>
+
+    
+               
+            </div>
+
+            <div class="right-cnt col-lg-6 col-md-6 col-sm-12">
+                <div class="card-billing">
+
+           <form>
+            <div class="billing-header">
+                <h3>Billing Address</h3>
+            </div>
+
+            <div class="left-input-wrapper">
+                <input type="text" placeholder="FullName">
+                <input type="email" placeholder="you@example.com">
+                <address>
+                    <textarea placeholder="address"></textarea>
+                </address>
+                <div class="input_last">
+                    <input type="text" placeholder="Your City">
+                    <input type="number" placeholder="zip code">
+                </div>
+            
+               
+            </div>
+
+            <div class="right-payment-content">
+                <div class="payment-header">
+                    <h2>Payment</h2>
+                    <p>Accepted cards</p>
+                    <div class="payment-logos">
+                        <img src="./Pictures/Mastercard-Simbolo.jpg" alt="">
+                        <img src="./Pictures/Paypal.png" alt="">
+                        <img src="./Pictures/Visa-Blue.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="payment-inputs">
+                    <input type="text" placeholder="Name On the card">
+                    <input type="number" placeholder="Card Number">
+                    <input type="number" placeholder="Exp. date">
+                    <input type="number" placeholder="CVV">
+                </div>
+
+                <div class="confirm-address-biling">
+                    <input type="checkbox"><p>address same as billing</p>
+                </div>
+
+                <div id="payment-button">
+                    <button type="button">Pay</button>
+                </div>
+
+            </div>
+           </form>
+                   
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+
+    <script src="./JavaScript/Chckout.js"></script>
+    <script src="./JavaScript/cart.js"></script>
+
+    <script>
+        let preloaderchckOut= document.querySelector('.checkout-preloader');
+
+        window.addEventListener('load', ()=>{
+            preloaderchckOut.timeOut = setTimeout(()=> preloaderchckOut.remove(), 10000);
+        })
+    </script>
+</body>
+</html>

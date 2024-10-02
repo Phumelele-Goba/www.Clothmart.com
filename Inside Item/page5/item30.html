@@ -1,0 +1,3360 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothmart || Item</title>
+
+    
+    <!-- Bootscrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootscrap Link -->
+
+        <!--Fontawesome link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" 
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" 
+       crossorigin="anonymous" referrerpolicy="no-referrer" />
+       <!--Fontawesome link  -->
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=Playpen+Sans:wght@500&display=swap"
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@600&family=Playpen+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
+
+
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body{
+        background: #fff;
+        overflow-x: hidden;
+        height: auto;
+
+        
+    }
+
+    html{
+        font-size: 10px;
+    }
+
+    /* NAVBAR AND THE SHOP START--------------------- */
+
+    .container-fluid{
+        width: 100%;
+        height: auto;
+        padding: 0px 0px 80px 0px;
+    }
+
+    .container{
+        width: 1200px;
+        height: auto;
+        margin: auto;
+        /* border: 0.1rem solid red; */
+    }
+
+    #NavBar{
+        top: 0;
+        position: fixed;
+        width: 100%;
+        left: 0;
+        height: 7rem;
+        padding: 2rem auto;
+        background-color: aliceblue;
+        z-index: 1800;
+        box-shadow: 0.1rem 0.1rem 0.9rem #000;
+
+    }
+
+
+
+    .closeNav{
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+ 
+
+
+    .sideNavBar{
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+    }
+
+    /* #NavBar li{
+        list-style: none;
+        margin-left: 4rem;
+    } */
+
+    /* #NavBar li a{
+        font-family: 'Quicksand', sans-serif;
+        font-family: 'Rancho', cursive;
+        letter-spacing: 0.3rem;
+        font-size: 1.4rem;
+        color: rgba(128, 128, 128, 0.918);
+    } */
+
+    /* #nav-list{
+        margin-top: 2rem;
+        margin-left: 40rem;
+        display: flex;
+        position: absolute;
+
+    } */
+
+    .logo-top{
+        margin-left: 62rem;
+        margin-top: 1.4rem;
+        position: absolute;
+    }
+
+.logo-top h1{
+    font-size: 1.7rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Rubik Moonrocks', sans-serif;
+
+}
+
+
+.logo-top i{
+    font-size: 1.4rem;
+    color: orangered;
+}
+
+.logo-top p{
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-left: 1rem;
+    font-family: 'Rancho', cursive;
+    margin-top: -0.5rem;
+}
+
+.logo-top p span{
+    color: orangered;
+}
+
+
+
+
+
+
+    .cart-wrapper{
+        float: right;
+        right: 30rem;
+        position: absolute;
+        margin-top: 2rem;
+    }
+
+    .cart-wrapper i{
+        color: #000;
+        font-size: 1.7rem;
+    cursor: pointer;
+
+    }
+
+    .cart-wrapper i:hover{
+        color: orangered;
+    }
+
+    
+.cart-wrapper sup{
+    position: absolute;
+
+    }
+
+
+
+    .cart-wrapper span{
+       position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        padding: 0.7rem 0.7rem;
+        border-radius: 50%;
+        background-color: rgb(223, 55, 3);
+        margin-top: -0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 1.1rem;
+
+}
+
+
+.size-select select{
+    width: 17rem;
+    height: 3rem;
+    outline: none;
+    background-color: #000;
+    border: 0.1rem solid grey;
+    border-radius: 0.5rem;
+    opacity: .9;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-bottom: 1.8rem;
+}
+
+
+.size-select option{
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+
+
+
+    .add-2-cart{
+        width: 18rem;
+        height: 4rem;
+        border: none;
+        margin-top: 1.5rem;
+        background-color: rgb(199, 63, 14);
+        color: #fff;
+        font-family: 'Playpen Sans', cursive;
+        font-size: 1.4rem;
+        transition: 0.5s;
+    }
+
+    .add-2-cart:hover{
+        background-color: orangered;
+    }
+
+    .container .product-list h3{
+        padding-top: 5px;
+        letter-spacing: 2px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        font-family: 'Playpen Sans', cursive;
+    }
+
+    .container .product-list h4{
+        padding: 3px 0px;
+        letter-spacing: 0.1rem;
+        font-size: 1.3rem;
+        font-family: 'Edu TAS Beginner', cursive;
+        font-weight: 600;
+    }
+
+    .quantity-text{
+        display: flex;
+    }
+
+    .quantity{
+        margin-bottom: 5rem;
+    }
+
+
+    .quantity input{
+        height: 3rem;
+        width: 3rem;
+        outline: none;
+        color: orangered;
+        border: 0.1rem solid #000;
+        text-align: center;
+        padding-left: 0.4rem;
+        font-size: 1.5rem;
+        margin-left: 0.8rem;
+    }
+
+    .quantity-text p{
+        font-size: 1.8rem;
+        margin-top: -0.3rem;
+    }
+
+
+
+
+
+/* ITEMS SECTION END----------------*/
+#rate i{
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+.img-section{
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 4rem;
+    margin-top: 1.7rem;
+
+}
+
+
+.img-section img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 0.1rem solid grey;
+    border-radius: 4rem;
+
+}
+
+
+.text-header h2{
+    font-size: 1.8rem;
+    /* font-family: 'Edu TAS Beginner', cursive; */
+    font-family: 'Playpen Sans', cursive;
+    color: #000;
+    font-weight: 500;
+    margin-left: 1.8rem;
+}
+
+.items-suggested {
+    margin-top: 11rem;
+}
+
+
+.related_products{
+    margin-top: 4rem;
+}
+
+.Product-details{
+    margin-top: 11rem;
+}
+
+.product__details h4{
+    font-size: 1.8rem;
+    font-family: 'Playpen Sans', cursive;
+    font-weight: 600;
+
+}
+
+.right-text{
+    border: none;
+    margin-left: -5rem;
+}
+  
+.right-text a{
+    color: orangered;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+
+
+}
+
+.right-text span{
+    font-size: 1.4rem;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    margin-left: 1.4rem;
+
+}
+ 
+
+.related-text h3{
+  text-align:  center;
+  margin-bottom: 0.8rem;
+ 
+}
+
+
+.related-text hr{
+    width: 5.5rem;
+    background-color:rgb(175, 50, 5);
+    font-weight: bold;
+    height: 0.2rem;
+    margin: 0 auto;
+}
+
+
+.image-section{
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border: 0.1rem solid gray;
+
+
+}
+
+.image-section img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+
+
+
+
+
+.image-section:hover img{
+    transform: scale(.78);
+
+}
+
+
+
+
+.image-section{
+    margin: auto 1rem;
+}
+
+.stars{
+    display: flex;
+    margin-left: 1rem;
+    position: absolute;
+}
+.stars li{ 
+   list-style: none;
+}
+
+.stars li i{
+    color: orangered;
+    font-size: 1.4rem;
+    margin-left: 1.5rem;
+}
+
+
+.text-header h4{
+    font-size: 1.8rem;
+    font-style: italic;
+    margin-left: 2rem;
+}
+
+
+.dummy-text p{
+    font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+
+.right__sec{
+    margin-left: -20rem;
+    margin-top: 1.4rem;
+    width: 60%;
+}
+
+
+
+/* VIEW MORE ITEM DETAILS */
+
+.viewMore{
+    width: 10rem;
+    height: 3.4rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    outline: none;
+    position: absolute;
+    margin-left: 28rem;
+    margin-top: -2rem;
+    background-color: #000;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    transition: 0.5s;
+    border-radius: 25rem;
+}
+
+.viewMore:hover{
+    background-color: orangered;
+}
+.bg-view-section{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+}
+
+.view-section{
+    width: 35rem;
+    height: 25rem;
+    position: relative;
+    margin-top: -28rem;
+    margin-left: 22rem;
+    background-color: whitesmoke;
+    overflow-y: scroll;
+    box-shadow: 0.1rem 0.1rem 0.2rem #000;
+    border: 0.1rem solid grey;
+    cursor: pointer;
+    border-radius: 1rem;
+  
+
+}
+
+.view-section::-webkit-scrollbar{
+ display: none;
+}
+
+.view-section h2{
+    color: #000;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    /* border-bottom: 0.1rem solid orangered; */
+
+
+}
+
+.view-section span{
+color: #000;
+font-size: 1.4rem;
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+font-style: italic;
+letter-spacing: 0.1rem;
+
+
+}
+
+.view-section p{
+    color: #000;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+    letter-spacing: 0.1rem;
+
+
+}
+
+.view-section hr{
+    background-color: #000;
+}
+
+
+.main-details{
+    margin-left: 4rem;
+}
+
+.main-details p{
+    font-weight: 600;
+}
+
+.close-view{
+    float: right;
+    margin-top: 1.2rem;
+    right: 2.5rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    position: relative;
+    border: 0.1rem solid #000;
+    background-color: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+
+
+}
+
+.close-view:hover{
+    background-color: orangered;
+    border: none;
+}
+
+
+
+.close-v{
+    transform: rotate(45deg);
+    margin-left: -0.7rem;
+    margin-top: -0.6rem;
+
+
+}
+
+.close-view span{
+    font-size: 2rem;
+    color: #fff;
+
+
+}
+
+#copright-view{
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    margin-left: 4rem;
+    margin-top: 2rem;
+}
+
+.product__details{
+    margin-top: -1.8rem;
+}
+/* VIEW MORE ITEM DETAILS */
+
+
+
+/* SIDENAV SECTION START */
+
+.sideNavList li a{
+    font-size: 1.5rem;
+    color: red;
+}
+
+
+/* SIDENAV SECTION END */
+
+
+
+/* FOOTER SECTION START-------------- */
+
+#Footer{
+   background-color: #000;
+   width: 100%;
+   height:  65vh;
+   margin-top: 10rem;
+   position: relative;
+}
+
+
+
+.clothing-footer{
+    margin-left: 13rem;
+}
+
+.Accessories{
+    margin-left: -14rem;
+}
+
+
+.clothing-footer h2,
+.footwear-clothing h2,
+.Accessories h2
+
+
+{
+    color: orangered;
+    letter-spacing: 0.1rem;
+    font-size: 1.9rem;
+
+}
+
+.list li{
+    list-style: none;
+    margin-bottom: 0.1rem;
+    
+}
+
+.list li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.list li a:hover{
+    color: orangered;
+    border-bottom: 0.1rem solid orangered;
+}
+
+.footer-img{
+   position: relative;
+   /* padding-top: 2rem; */
+   margin-top: 33rem;
+   margin-left: 55rem;
+   /* width: 30rem;
+   height: 15rem; */
+   width: 18rem;
+   height: 18rem;
+
+}
+
+.footer-img img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* border-radius: 50%; */
+    /* z-index: 300; */
+   /* border: 0.1rem solid grey; */
+
+}
+
+#Footer img{
+   position: absolute;
+   width: 10rem;
+   height: 10rem;
+   border-radius: 50%;
+
+  
+}
+
+
+
+
+
+
+ #social-media{
+   display: flex;
+   justify-content: center;
+   margin-top: 1.5rem;
+ } 
+ 
+ #social-media i{
+   font-size: 1.8rem;
+   color: gray;
+   margin: auto 1.5rem;
+   cursor: pointer;
+ }
+
+ .footer-social_end{
+   margin-top: 4rem;
+ }
+
+ .footer-social_end hr{
+   color: gray;
+   height: 0.1rem;
+ }
+
+
+ .subscribe{
+
+    margin: 6rem 80rem;
+    display: block;
+    position: absolute;
+ }
+
+ .subscribe input{
+    height: 3.4rem;
+    width: 20rem;
+    border-right: none;
+    outline: none;
+    border: 0.1rem solid #fff;
+   font-family: 'Poppins', sans-serif;
+   padding: 1.5rem;
+    font-size: 1.3rem;
+
+ }
+
+ .subc-Btn{
+    background-color: rgb(170, 70, 34);
+    height: 3.5rem;
+    width: 8rem;
+    border-left: none;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    padding:   auto 1.9rem;
+   font-family: 'Poppins', sans-serif;
+   text-transform: uppercase;
+   transition: 0.5s;
+   cursor: pointer;
+ }
+
+
+ .subc-Btn:hover{
+    background-color: rgb(177, 49, 3);
+
+ }
+
+ .subscribe .text p{
+    color: #fff;
+    font-size: 1.4rem;
+   font-family: 'Poppins', sans-serif;
+   font-style: italic;
+ }
+
+ #copright{
+   display: flex;
+   justify-content: center;
+   margin-top: 2.5rem;
+ }
+
+
+ #copright i{
+   color: gray;
+   font-size: 1.6rem;
+   font-style: italic;
+   font-family: 'Poppins', sans-serif;
+
+ }
+
+ #social-media .fa-facebook,
+ #social-media .fa-instagram,
+ #social-media .fa-youtube,
+ #social-media .fa-twitter
+    {
+      transition: 0.5s;
+    }
+
+    #social-media .fa-facebook{
+        color: #fff;
+       
+    }
+    #social-media .fa-facebook:hover{
+        color: orangered;
+    
+    }
+
+    #social-media .fa-instagram{
+      color: #fff;
+
+    }
+    #social-media .fa-instagram:hover{
+        color: orangered;
+
+    }
+
+
+    #social-media .fa-youtube{
+        color: #fff;
+      
+    }
+    #social-media .fa-youtube:hover{
+      color: orangered;
+    }
+
+    #social-media .fa-twitter{
+      color: #fff;
+
+    
+    }
+    #social-media .fa-twitter:hover{
+      color: orangered;
+
+    }
+
+    #Page-navigation{
+        /* margin-top: 21.5rem; */
+        margin-top: -30rem;
+    }
+
+ 
+ 
+
+     
+.page-link
+{
+    border-radius: 5rem;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid orangered;
+    padding: auto 3rem;
+    margin: auto 1rem;
+    transition: 0.5s;
+    font-size: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+
+
+
+}
+
+
+
+
+
+
+
+.numberOne.active,
+.page-link:hover{
+    background-color: orangered;
+    color: #fff;
+}
+
+.stars{
+    position: relative;
+    /* border: 1px solid red; */
+    width: 13rem;
+    height: 4rem;
+    margin-left: 1rem;
+
+}
+
+
+
+.stars i{
+    padding: auto 2rem;
+    color: orangered;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+.payment-brands{
+         position: relative;
+         height: 7rem;
+         width: 16rem;
+         margin-left: 14rem;
+         border: none;
+         padding: 1rem auto;
+
+      }
+
+      .payment-brands img{
+         position: absolute;
+         width: 100%;
+         height: 100%;
+      }
+
+      .LogoPayments{
+         height: 4rem;
+       
+      }
+
+      .Guanteed-text{
+         text-align: center;
+         margin-top: 9rem;
+     
+
+      } 
+      
+      .Guanteed-text h5{
+        color: #fff;
+        font-size: 1.5rem;
+         font-family: 'Poppins', sans-serif;
+         font-style: italic;
+         letter-spacing: 0.1rem;
+         
+
+      }
+/* FOOTER SECTION END-------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------SMALLER SCREENS SECTION START-------------------- */
+
+
+@media screen and (max-width: 1340px){
+   /* body{
+     background-color: peru;
+} */
+
+.product-list{
+    margin-left: -10rem;
+
+
+}
+
+.product img{
+    width: 18rem;
+    height: 18rem;
+}
+
+#CART{
+    margin-left: 7rem;
+    position: absolute;
+}
+
+/* .pagination{
+    margin-left: 0rem;    
+} */
+
+
+
+
+}
+
+
+/* screens max of 1200px start */
+@media screen and (max-width: 1200px){
+    /* body{
+        background-color: blue;
+    } */
+
+.previous{
+        display: none;
+    }
+
+   #nav-list{
+    display: none;
+   }
+
+   .logo-top p{
+    margin-left: -1.7rem;
+   }
+
+   #user-icon_cart-wrapper{
+    margin-top: -0.2rem;
+   }
+
+ 
+
+
+   .button-nav{
+    display: none;
+   }
+ 
+
+
+
+    #menu-Btn{
+        position: fixed;
+        width: 5rem;
+        height: 5rem;
+        background: transparent;
+        display: block;
+        left: 1rem;
+        top: 0.4rem;
+        cursor: pointer;
+        z-index: 3000;
+    }
+
+    .Hamburger{
+        margin-top: 1.3rem;
+        margin-left: 0.9rem;
+
+    }
+
+    .Hamburger .line{
+        background-color: orangered;
+        width: 2.5rem;
+        height: 0.2rem;
+        margin-top: 0.5rem;
+        border-radius: 0.3rem;
+        transition: 0.5s;
+    }
+
+    .Hamburger:hover .line{
+        background-color: rgb(199, 75, 30);
+    }
+
+    .Hamburger .line:nth-child(1){
+        width: 1.8rem; 
+    }
+    .Hamburger .line:nth-child(3){
+        width: 1.8rem; 
+    }
+
+    
+
+   
+/* SIDENAVBAR SECTION START------------ */
+.sideNavBar{
+    visibility: visible;
+    display: flex;
+    opacity: .9;
+}
+
+
+.sideNavBar{
+    position: fixed;
+    z-index: 2000;
+    left: -55%;
+    top: 0;
+    height: 100vh;
+    width: 55%;
+    background-color: #000;
+    box-shadow: 0.1rem 0.1rem 0.4rem #000;
+    transition: all 0.5s;
+    
+}
+
+.closeNav{
+    position: absolute;
+    margin-left: 2rem;
+    margin-top: 0;
+    display: none; /* it has been displayed none because it appears the same time as the menu button */                      
+    visibility: visible;
+    opacity: 1;
+}
+
+.closeNav span{
+    color: orangered;
+    font-size: 4rem;
+    transform: rotate(45deg);
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.closeNav span:hover{
+    color: #000;
+}
+
+
+
+
+
+
+
+
+.sideNavList{
+    position: absolute;
+    top: 57%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.sideNavList li{
+    display: block;
+    margin-block: 1.4rem;
+    list-style: none;
+    width: 40rem;
+    
+}
+
+.sideNavList li a{
+    text-decoration: none;
+    color: #ddd;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.sideNavList li a:hover{
+    color: orangered;
+    border-bottom: 0.1rem solid orangered;
+}
+
+.sideNavList i{
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.sideNavList i:hover{
+    color: rgb(175, 50, 5);
+}
+
+
+
+
+.logo-sidenavbar{
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    display: flex;
+}
+
+.logo-sidenavbar i{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.logo-sidenavbar h3{
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+#copright-sidenav{
+    position: absolute;
+    bottom: 0;
+    left: 14rem;
+
+}
+
+#copright-sidenav i{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* SIDENAVBAR SECTION END------------ */
+
+
+   .logo-top{
+    margin-left: 40rem;
+   }
+
+   .home-icon{
+    display: none;
+   }
+
+    #user-icon_cart-wrapper{
+        margin-left: -17rem;
+        position: relative;
+    }
+
+.modal-content{
+    width: 100rem;
+    height: 55rem;
+    margin-left: 8.4rem;
+
+}
+
+    #nav-list{
+        margin-left: 28rem;
+        margin-top: 1.1rem;
+    }
+
+    #nav-list li a{
+        margin-left: 0.3rem;
+        font-size: 1.5rem;
+    }
+
+    #user{
+    margin-right: 30rem;
+        position: absolute;
+    }
+
+    .add-2-cart{
+        width: 18rem;
+    }
+
+
+
+    .right__sec{
+    margin-left: -15rem;
+   
+}
+
+
+
+
+
+.header-wrapper {
+    /* border: 0.1rem solid red; */
+    width:35rem;
+}
+
+
+
+
+.subscribe{
+
+margin: 6rem 60rem;
+
+}
+
+.Guanteed-text{
+         margin-top: 8rem;
+     
+
+      } 
+
+
+#Footer{
+   height:  60vh;
+  
+}
+
+.LogoPayments{
+    margin-left: 15rem;
+}
+
+.payment-brands
+{
+    margin-left: 3rem;
+}
+
+
+
+}
+/* screens max of 1200px End */
+
+
+/* Screens Max Of 995px Start */
+@media screen and (max-width: 995px) {
+
+
+    /* body{
+        background-color: yellow;
+    } */
+
+
+    .container .search_box{
+      margin-left: -2rem;
+    }
+    .button_nav-wrapper{
+        display: none;
+    }
+
+ 
+
+    
+   #user-icon_cart-wrapper{
+    margin-top: 0.8rem;
+   }
+      
+    .container .search_box h1{
+        margin-left: 2rem;
+        font-size: 2.5rem;
+        
+    }
+
+    #menu-Btn{
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        background: transparent;
+        display: block;
+        left: 1rem;
+        top: 0.4rem;
+        cursor: pointer;
+        /* z-index: 2600; */
+    }
+
+    .Hamburger{
+        margin-top: 1.3rem;
+        margin-left: 0.9rem;
+
+    }
+
+    .Hamburger .line{
+        background-color: orangered;
+        width: 2.5rem;
+        height: 0.2rem;
+        margin-top: 0.5rem;
+        border-radius: 0.3rem;
+        transition: 0.5s;
+    }
+
+    .Hamburger:hover .line{
+        background-color: rgb(199, 75, 30);
+    }
+
+    .Hamburger .line:nth-child(1){
+        width: 1.8rem; 
+    }
+    .Hamburger .line:nth-child(3){
+        width: 1.8rem; 
+    }
+
+   #nav-list{
+    display: none;
+   }
+
+   .logo-top{
+    margin-left: 33rem;
+   }
+
+   .home-icon{
+    display: none;
+   }
+
+.img-section{
+  margin-left: -4rem;
+}
+
+   .right__sec{
+    margin-left: -7.2rem;
+   
+}
+
+
+
+
+    #user-icon_cart-wrapper{
+        margin-left: -36rem;
+        position: relative;
+    }
+
+    .header-wrapper h5{
+        font-size: 1.6rem;
+    }
+
+    .header-wrapper p{
+        font-size: 1.2rem;
+    }
+
+    /* #nav-list{
+        margin-left: 28rem;
+        margin-top: 1.1rem;
+    }
+
+    #nav-list li a{
+        margin-left: 0.3rem;
+    } */
+
+    #CART{
+        /* margin-left: 21rem; */
+        margin-left: 17rem;
+    }
+
+    #user{
+        position: absolute;
+        margin-left: 95rem;
+    }
+       
+    .search_box {
+
+        width: 1200vw;
+    }   
+
+.search_box input{
+    font-size: 1.6rem;
+}
+
+.btn-view_wrapper button{
+        width: 13rem;
+        height: 3.5rem;
+        margin-left: -6rem;
+        position: absolute;
+       
+
+    }
+
+  /* view item details section */
+.viewMore{
+    margin-left: 15rem;
+    margin-top: -2.4rem;
+    width: 10rem;
+    height: 3.4rem;
+    padding: 0.8rem 2rem;
+  
+ 
+}
+    .product__details{
+         margin-left: -13rem;
+    }
+
+.view-section h2{
+
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+
+
+
+}
+
+.view-section{
+    width: 40rem;
+    height: 25rem;
+    position: relative;
+    margin-top: -28rem;
+    margin-left: 18rem;
+
+  
+
+}
+
+.view-section p{
+    color: #000;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 2.5rem;
+    padding-right: 2rem;
+    letter-spacing: 0.1rem;
+
+
+}
+
+.view-section hr{
+    background-color: #000;
+}
+
+
+.main-details{
+    margin-left: -1.5rem;
+}
+
+.close-view{
+    float: right;
+    margin-top: 2rem;
+    right: 1.4rem;
+    width: 2rem;
+    height: 2rem;
+ 
+
+
+}
+
+.close-v{
+    margin-left: -0.9rem;
+    margin-top: -0.7rem;
+
+
+}
+
+.close-view span{
+    font-size: 1.5rem;
+
+
+}
+
+#copright-view{
+    margin-left: 1rem;
+}
+    /* view item details section */
+
+
+
+
+.LogoPayments{
+    margin-left: 5rem;
+}
+
+.clothing-footer,
+.footwear-clothing,
+.Accessories
+
+{
+    margin: 0 8rem;
+}
+
+
+#Footer{
+    border-color: red;
+    height: 90vh;
+}
+
+.Accessories{
+    margin-bottom: 8rem;
+}
+
+
+.subscribe{
+    margin-top: 16rem;
+    margin-left: 6rem;
+}
+
+.related_products{
+    margin-left: 9rem;
+}
+
+.image-section{
+    margin-bottom: 2rem;
+}
+
+
+}
+ /* Screens Max Of 995px End */
+
+
+
+ /* Screens Of Max 768px START */
+
+ @media screen and (max-width: 768px){
+/* body{
+    background-color:  purple;
+} */
+
+
+#copright-sidenav{
+
+    left: 0rem;
+}
+
+
+.img-section{
+    margin-left: 5rem;
+}
+
+
+.logo-sidenavbar{
+    left: 0;
+    bottom: 4rem;
+}
+
+.logo-top{
+    margin-left: 25rem;
+}
+
+.logo-top h1{
+    font-size: 1.3rem;
+}
+
+.logo-top i{
+    font-size: 1rem;
+}
+
+#nav-list {
+    margin: 1.4rem 18rem;
+}
+
+
+.sideNavList{
+    position: absolute;
+    top: 57%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+}
+
+#nav-list li a{
+    font-size: 1.2rem;
+}
+
+#CART{
+        margin-left: 22rem;
+    }
+
+    
+    #user{
+        position: absolute;
+        margin-left: 84rem;
+    }
+
+
+.search_box input{
+    font-size: 1rem;
+}
+
+
+.product img{
+    width: 25rem;
+    height: 25rem;
+}
+
+.container .product-list{
+        display: flex;
+        flex-direction: column;
+        margin-left: 13rem;
+     
+
+    }
+
+.add-2-cart{
+    width: 25rem;
+}
+
+.btn-view_wrapper button{
+        margin-left: -8rem;
+       
+
+    }
+
+
+.img-sign-wrapper{
+display: none;
+}
+
+.bg-modal{
+    height: 2432vh;
+}
+
+    .modal-content{
+     height: 80vh;
+    margin-top: 2rem;
+    width: 60rem;
+
+    }
+
+
+.header-wrapper{
+    width: 30rem;
+    margin-left: 8rem;
+    margin-top: 2.2rem;
+}
+
+.sign-card_wrapper{
+
+    margin-left: -40rem;
+    margin-top: 40rem;
+}
+
+.LogoPayments{
+    margin-left: 3rem;
+}
+
+.payment-brands{
+    margin-left: 1.4rem;
+}
+
+.payment-brands img
+{
+   width: 11rem;
+}
+
+
+
+
+
+.customer-deals li{
+    width: 50rem;
+}
+
+.right__sec{
+    margin-left: 9rem;
+    width: 40rem;
+}
+
+.dummy-text {
+    width: 50rem;
+    margin-left: -4rem;
+}
+
+
+/* view item details section */
+.viewMore{
+    margin-left: 17rem;
+    margin-top: -2rem;
+    width: 10rem;
+    height: 3.4rem;
+    padding: 0.8rem 2rem;
+}
+
+.view-section span{
+   font-size: 1.2rem;
+   font-weight: 500;
+   font-style: italic;
+
+
+}
+    .product__details{
+         margin-left: -13rem;
+    }
+
+.view-section h2{
+
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+
+
+
+}
+
+.view-section{
+    width: 40rem;
+    height: 25rem;
+    position: relative;
+    margin-top: -28rem;
+    margin-left: 15rem;
+
+  
+
+}
+
+.view-section p{
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+
+}
+
+.view-section hr{
+    background-color: #000;
+}
+
+
+.main-details{
+    margin-left: -1.5rem;
+}
+
+.close-view{
+    float: right;
+    margin-top: 2rem;
+    right: 1.4rem;
+    width: 2rem;
+    height: 2rem;
+ 
+
+
+}
+
+.product__details{
+         margin-left: 2rem;
+    }
+
+.close-v{
+    margin-left: -0.9rem;
+    margin-top: -0.7rem;
+    color: #fff;
+
+
+}
+
+.close-view span{
+    font-size: 1.5rem;
+
+
+}
+
+#copright-view{
+    margin-left: 1rem;
+}
+    /* view item details section */
+
+
+.related_products{
+    margin-left: 13rem;
+}
+
+
+ }
+ /* Screens Of Max 768px END */
+
+
+
+ /* Screens Of Max 590px START */
+
+
+
+ @media screen and (max-width:590px){
+
+       /* body{
+        background-color: chocolate;
+       } */
+
+       .dummy-text {
+    width: 45rem;
+    margin-left: -4rem;
+}
+
+
+
+
+.logo-top{
+    margin-left: 15rem;
+}
+       .sideNavList i{
+        font-size: 1.4rem;
+        margin-left: 2rem;
+       }
+
+       .sideNavList{
+        margin-left: 2rem;
+
+       }
+
+       
+.sideNavList{
+    position: absolute;
+    top: 57%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+       
+.logo-sidenavbar{
+    left: 0;
+    bottom: 2rem;
+}
+
+.sideNavList li a{
+    font-size: 1.5rem;
+    width: 60rem;
+}
+
+
+
+#nav-list {
+    margin: 1.4rem 13rem;
+}
+
+.logo-top h1{
+    font-size: 1.5rem;
+    letter-spacing: normal;
+}
+
+#user{
+        position: absolute;
+        margin-left: 72rem;
+    }
+
+    #CART{
+        margin-left: 24rem;
+    }
+
+   
+
+    .product{
+        margin-left: -2rem;
+    }
+
+.img-wrapper img{
+    width: 22rem;
+    height: 22rem;
+}
+    
+.add-2-cart{
+    width: 22rem;
+
+}
+.subscribe{
+    margin-top: 40rem;
+}
+
+
+
+    .btn-view_wrapper {
+        position: relative;
+    }
+
+    .btn-view_wrapper button{
+        margin-left: 6rem;
+        position: absolute;
+       background-color: red;
+       margin-top: 100rem;
+
+    }
+
+    .bg-modal{
+    height: 2335vh;
+}
+
+    
+#Sign-form-wrapper{
+    margin-left: 57rem;
+
+}
+
+.modal-content{
+    width: 50rem;
+    margin-left: 22rem;
+}
+
+
+ /* view item details section */
+ .viewMore{
+    margin-left: 7rem;
+    margin-top: -2rem;
+    width: 10rem;
+    height: 3.4rem;
+    padding: 0.8rem 2rem;
+  
+ 
+}
+
+.view-section span{
+   font-size: 1.2rem;
+   font-weight: 500;
+   font-style: italic;
+
+
+}
+    .product__details{
+         margin-left: -13rem;
+    }
+
+.view-section h2{
+
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+
+
+
+}
+
+.view-section{
+    width: 25rem;
+    height: 25rem;
+    position: relative;
+    margin-top: -28rem;
+    margin-left: 10rem;
+
+  
+
+}
+
+.view-section p{
+    font-size: 1.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+
+}
+
+.view-section hr{
+    background-color: #000;
+}
+
+
+.main-details{
+    margin-left: -1.5rem;
+}
+
+.close-view{
+    float: right;
+    margin-top: 2rem;
+    right: 1.4rem;
+    width: 2rem;
+    height: 2rem;
+ 
+
+
+}
+
+.product__details{
+         margin-left: 2rem;
+    }
+
+.close-v{
+    margin-left: -0.9rem;
+    margin-top: -0.7rem;
+    color: #fff;
+
+
+}
+
+.close-view span{
+    font-size: 1.5rem;
+
+
+}
+
+#copright-view{
+    margin-left: 1rem;
+}
+    /* view item details section */
+
+.related-text{
+    margin-left: -68rem;
+}
+
+
+ .close{
+    margin-right: 2rem;
+    margin-top: -3.8rem;
+}
+
+.LogoPayments{
+    margin-top: 1rem;
+    margin-left: 5rem;
+}
+
+#Footer{
+    height: 133vh;
+}
+
+ 
+ }
+
+
+
+ /* Screens Of Max 590px END */
+
+/* SMALLER SCREENS SECTION END */
+
+
+
+/* INFINITY SVG START */
+
+  .containerr {
+    --uib-size: 55px;
+    --uib-color: black;
+    --uib-speed: 1.3s;
+    --uib-bg-opacity: .1;
+    height: calc(var(--uib-size) * (2.1 / 5));
+    width: var(--uib-size);
+    transform-origin: center;
+    overflow: visible;
+  }
+
+  .car {
+    fill: none;
+    stroke: var(--uib-color);
+    stroke-dasharray: 15, 85;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: travel var(--uib-speed) linear infinite;
+    will-change: stroke-dasharray, stroke-dashoffset;
+    transition: stroke 0.5s ease;
+  }
+
+  .track {
+    stroke: var(--uib-color);
+    opacity: var(--uib-bg-opacity);
+  }
+
+  @keyframes travel {
+    0% {
+      stroke-dashoffset: 0;
+    }
+
+    100% {
+      stroke-dashoffset: 100;
+    }
+  }
+/* INFINITY SVG END */
+
+
+#Preloader{
+    position:absolute;
+    width: 1200vw;
+    height: 640vh;
+    margin-left: -12rem;
+    top: 0;
+    z-index: 500;
+    background-color: #000;
+    opacity: .9;
+}
+
+.outerloader{
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    border: 1.2rem solid orangered;
+    border-right-color: transparent;
+    /* border-top-color: transparent; */
+     border-bottom-color: transparent;
+    position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     animation: rotate 0.5s linear infinite ;
+     transition: all 0.5s;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }50%{
+        transform: rotate(360deg); 
+    } 100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.innerloader{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 0.8rem solid #fff;
+    position: absolute;
+    top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     border-left-color:transparent;
+}
+
+
+.tag{
+    background-color: red;
+    width: 5rem;
+    height: 5em;
+    position: absolute;
+    /* margin-top: -15rem; */
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Playpen Sans', cursive;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border-top-right-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border-left: 1rem;
+    border-right: 1rem;
+}
+
+
+
+
+/* PAGINATION SECTION START */
+
+.pagination{
+     margin-top: 2.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 51rem;     */
+    /* width: 40rem; */
+    height: 9vh;
+     /* background: rgba(0, 0, 0, 0.9); */
+     background-color: #fff;
+     box-shadow: 0.1rem 0.1rem 0.8rem  #000;
+     /* border-radius: 25rem; */
+}
+
+
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2 auto;    
+    margin-left: -1.5rem;
+    margin-top: 1.3rem;
+
+}
+
+
+
+
+.links li{
+    list-style: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: auto 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 0.1rem solid grey;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    /* line-height: 3.5rem;
+    background-position: 0 -3.5rem;
+    transition:   background-position 0.5s; */
+
+}
+
+.links li.active{
+    background-color: orangered;
+    border: none;
+}
+
+.links li.active a{
+    color: #000;
+
+}
+
+.links li:hover:not(.active){
+    background-color: grey;
+}
+
+
+
+.links li a{
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.pgn-btn{
+    /* width: 6rem; */
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgb(126, 37, 5);
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    margin: auto 1.2rem;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    font-weight: bold;
+
+
+}
+
+.pgn-btn a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.pgn-btn:hover{
+    background-color: orangered;
+}
+
+.pages{
+    color: #000;
+    font-weight: bold;
+}
+
+.links li:hover:not(.active) .pages{
+    color: orangered;
+}
+
+
+/* PAGINATION SECTION END */
+
+
+
+/* TOAST SECTION START-------------- */
+
+
+.toast-notification{
+
+    --color: #0abf30;
+    background-image: linear-gradient(to right, #0abf3055, #22242f 50%);
+    width: 22rem;
+    height: 4.4rem;
+    position: absolute;
+    margin-top: -18rem;
+    float: right;
+    right: -15rem;
+    animation:  show 0.3s ease 1 forwards;
+    transition: all 0.7s;
+}
+
+@keyframes show {
+    0%{
+        transform: translateX(100%);
+
+    }40%{
+        transform: translateX(-8%);
+    }80%{
+        transform: translateX(0%);
+    }100%{
+        transform: translateX(-12%);
+    }
+    
+}
+
+
+.toast-notification::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color);
+    width: 100%;
+    height: 0.4rem;
+    /* box-shadow: 0rem 0rem 0.3rem var(--color); */
+    animation: timeOut 5s linear 1 forwards;
+
+}
+
+@keyframes timeOut {
+    to{
+        width: 0%;
+    }
+    
+}
+
+.toast-notification i{
+    color: var(--color);
+    font-size: 1.8rem;
+    margin: 1.1rem 0.9rem;
+}
+
+.message{
+    margin-top: -3.9rem;
+    margin-left: 4.2rem;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.text-1{
+    color: #fff;
+    font-size: 1.6rem;
+    margin-left: 3rem;
+}
+
+.text-2{
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.toast-close{
+    transform: rotate(45deg);
+    position: absolute;
+    margin: -4.2rem 20rem;
+    cursor: pointer;
+
+
+}
+
+.toast-close span{
+    color: #fff;
+    font-size: 2rem;
+
+}
+
+
+/* TOAST SECTION END-------------- */
+
+.bg-cart-wrapper-appear{
+    position: absolute;
+    width: 100%;
+    height: 630vh;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 3000;
+    right: 0rem;
+    display: none;
+    visibility: visible;
+    opacity: 1;
+    top: 5.2rem;
+    transition: all 0.5s linear ;
+
+
+}
+
+
+.cart-appear-content{
+    height: 60vh;
+    width: 90%;
+    margin-left: 7.5rem;
+    background-color:  #fff;
+}
+
+.cartClose{
+    float: right;
+    position: absolute;
+    right: 7rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.cartClose span{
+    font-size: 3rem;
+}
+
+
+
+.previous{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    border: none;
+    margin: 1.4rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: orangered;
+
+}
+
+.previous i{
+    font-size: 1.4rem;
+    padding: 0.78rem 0.85rem;
+    font-weight: bold;
+    color: #fff;
+    /* justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute; */
+
+ 
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<body>
+
+    <div class="container-fluid">
+       
+        <div class="container">
+            <!-- PRELOADER SECTION START -->
+
+            <div id="Preloader">
+              
+                <div class="outerloader">
+                    <span class="innerloader"></span>
+                </div>
+  
+
+            </div>
+            <!-- PRELOADER SECTION END -->
+
+
+            <div id="NavBar">
+
+                <div class="previous">
+                    <a href="#" onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+                
+                <div id="menu-Btn">
+
+                    <div class="Hamburger">
+                
+                     <div class="line"></div>
+                     <div class="line"></div>
+                     <div class="line"></div>
+                     
+                    </div>
+                 </div>
+                <!-- MENUBUTTON WRAPPER END -->
+
+                <div class="sideNavBar">
+
+
+                    <ul class="sideNavList">
+                        <a href="index.html"><i class="fa-solid fa-house"></i></a>
+                        <li><a href="#">Men Clothing</a></li>
+                        <li><a href="#">Women Clothing</a></li>
+                        <li><a href="#">Men Sneakers</a></li>
+                        <li><a href="#">Women Sneakers</a></li>
+                        <li><a href="#">Men Bags</a></li>
+                        <li><a href="#">Women Bags</a></li>
+                        <li><a href="#">HeadGear</a></li>
+                        <li><a href="#">Jewelery</a></li>
+                    </ul>
+                  
+                    <div class="logo-sidenavbar">
+                        <i class="fa-solid fa-cart-shopping"></i><h3>clothmart</h3>
+                    </div>
+    
+                    <div id="copright-sidenav">
+                        <i><small> &copy; Copyright 2023 ClothMart. All Rights Reserved</small> </i>
+                     </div>
+       
+                     <div class="closeNav">
+                        <span>+</span>
+                    </div>
+                 
+    
+                </div>
+                <!-- SIDENAVBAR END -->
+
+           
+
+
+
+                   <div class="logo-top">
+                    <h1><i class="fa-solid fa-cart-shopping"></i>Clothmart</h1>
+                    <p>shop <span>smart</span> with <span>clothmart</span></p>
+
+                   </div>
+
+
+                   <div class="cart-wrapper">
+                    <i class="fa-solid fa-cart-shopping"  id="CART"><sup><span>0</span></sup></i>
+                       </div>
+                  
+    
+ 
+
+           
+
+                  </div>
+                </div>
+                <!-- NAVABAR SECTION END -->
+
+     
+                 
+
+      
+       
+
+           <div class="container product_view">
+            
+     
+              
+            <div class="row Product-details">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="card img-section">
+                           <img src="Pictures/thighsplitskirt.jpg" id="BigImage">
+                    </div>
+                  
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 right__sec">
+
+                    <div class="card right-text">
+                        <span><a href="index.html">Home</a> / WomenThighSplitSkirt</span>
+
+                        <div class="text-header">
+                            <h2>Thigh split skirt</h2>
+                            <h4>R249,99</h4>
+                
+                        
+                            <div class="stars">
+                                <li><i class="fa-solid fa-star"></i></li> 
+                                <li> <i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                               </div>
+
+                        </div>
+
+                        <div class="size-select">
+                            <select name="" id="option-list">
+                                <option class="select-header" selected disabled>select size</option>
+                                <option value="s">S</option>
+                               <option value="m">M</option>
+                              <option value="l">L</option>
+                             <option value="xl">XL</option>
+                            </select>
+                        </div>
+
+                        <div class="quantity align-center">
+
+                            <div class="quantity-text">
+                                <p>Quantity:</p>
+                                <input type="number" value="1" id="Quantity">
+                            </div>
+                            <button type="button" class="add-2-cart">add to cart</button>
+
+                           
+                        </div>
+                        <div class="product__details">
+                            <h4>Product Details</h4>
+                         
+
+                            <div class="dummy-text">
+                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum illo error, possimus distinctio provident architecto optio inventore minima numquam nostrum natus omnis quam perspiciatis ipsam rem fugiat eaque expedita eveniet hic sit nesciunt? Voluptatum rem omnis, eius deleniti voluptatem obcaecati nemo consequatur delectus earum, itaque, pariatur culpa nihil optio quos.</p> 
+                            </div>
+                            <!-- Dummy Text End Section -->
+
+                            <button class="viewMore">view more</button>
+
+                            <div class="bg-view-section">
+                              <section class="view-section">
+
+                                  <div class="close-view">
+                                      <div class="close-v">
+                                          <span>+</span>
+
+                                      </div>
+                                  </div>
+
+                                  <h2>Item details</h2>
+
+                                  <div class="main-details">
+                                      <p>Brand:<span>Thigh split skirt</span></p>
+                                      <br>
+                                     <p>Gender:<span>Women/Ladies</span></p> 
+                                      <br>
+                                     <p>color:<span>Black</span></p> 
+                                  </div>
+                                
+                                          <hr>
+                                          <p>Corporis autem illum illo provident commodi voluptates ex voluptas deserunt, 
+                                              sapiente ducimus perferendis nulla! Quisquam totam vitae nostrum, repellat corrupti voluptate iure quas!</p>
+                                         <hr>
+                                              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quasi accusamus molestias optio facere velit recusandae perferendis quae repudiandae, minus maiores nihil, non distinctio nisi placeat dolores doloremque rerum ducimus iste nulla maxime eius.
+                                             
+                                                            </p>
+                                                            <hr>
+                                                            <p> Provident unde laborum quos quas, voluptatem accusamus odio reiciendis mollitia ullam eius quaerat iste impedit alias, ad illo placeat sint qui maxime, sunt velit? Ex, adipisci.</p>
+                                                            <hr>
+                                                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia quasi accusamus molestias optio facere velit recusandae perferendis quae repudiandae, minus maiores nihil, non distinctio nisi placeat dolores doloremque rerum ducimus iste nulla maxime eius.
+                                                             </p>
+                                                             <hr>
+                                                             <p> Provident unde laborum quos quas, voluptatem accusamus odio reiciendis mollitia ullam eius quaerat iste impedit alias, ad illo placeat sint qui maxime, sunt velit? Ex, adipisci.</p>
+                                                             <hr>
+                                                             <div id="copright-view">
+                                                              <i><small> &copy; Copyright 2023 ClothMart. All Rights Reserved</small> </i>
+                                                           </div>
+                                         
+                                          </section>
+                            </div>
+                            <!-- background view item details end -->
+                        </div>
+            
+                    </div>
+
+                 
+                   
+                        
+
+                    </div>
+             
+                </div>
+
+                       
+    
+            </div>
+
+          
+<div class="container items-suggested">
+    <div class="similar-items">
+               <div class="related-text">
+                <h3>Related Products</h3>
+                <hr>
+
+               </div>
+
+
+        <div class="row related_products">
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image-section">
+                    <img src="Pictures/polyesterslitskirt.jpg" alt="">
+                   
+
+                    </div>
+                  
+
+              
+            </div>
+            <!-- Col end -->
+
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image-section">
+                    <img src="Pictures/distygreenfloralskirt.jpg" alt="">
+
+
+                    </div>
+
+              
+            </div>
+            <!-- Column end -->
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+
+                <div class="image-section">
+                        <img src="Pictures/floralblueblouse.jpg" alt="">
+
+    
+                    </div>
+
+
+                
+            </div>
+            <!-- Column end -->
+
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="image-section">
+                    <img src="Pictures/blousefloralgreen.jpg" alt="">
+
+                  
+                    <!-- <button type="button" id="add-2-cart">add to cart</button> -->
+
+
+
+                </div>
+            </div>
+            <!-- Col end -->
+
+     
+    </div>
+
+    </div>
+
+
+</div>
+<!-- Related products section end
+
+
+       
+
+        
+ 
+
+    </div>
+    <!-- SHOP SECTION END---------- -->
+    
+
+    
+  <footer id="Footer">
+    <div class="row">
+ 
+
+        <!-- <div id="list_footer  "> -->
+            <div class="col-lg-3 col-md-3 col-sm-2 ">
+                <div class="clothing-footer">
+                   <h2>Clothing</h2>
+                   <ul class="list">
+                      <li><a href="#">Men</a></li>
+                      <li><a href="#">Boys</a></li>
+                      <li><a href="#">Women</a></li>
+                      <li><a href="#">Girls</a></li>
+                      
+                   </ul>
+       
+                </div>
+             </div>
+       
+             <div class="col-lg-3 col-md-3 col-sm-2 ">
+                <div class="footwear-clothing">
+                   <h2>Footwear</h2>
+                   <ul class="list">
+                      <li><a href="#">Men</a></li>
+                      <li><a href="#">Boys</a></li>
+                      <li><a href="#">Women</a></li>
+                      <li><a href="#">Girls</a></li>
+                   </ul>
+       
+                </div>
+       
+             </div>
+       
+             <div class="col-lg-3 col-md-3 col-sm-2 ">
+                <div class="Accessories">
+                   <h2>Accessories</h2>
+                   <ul class="list">
+                      <li><a href="#">Women</a></li>
+                      <li><a href="#">Men</a></li>
+                    
+                  
+        
+                   </ul>
+       
+                </div>
+                 
+             </div>
+       
+
+ 
+
+       </div>
+
+
+
+
+
+ 
+    <div class="row footer-social_end">
+       <hr>
+       <div id="social-media">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-youtube"></i>
+ 
+       </div>
+
+      
+       <div id="copright">
+          <i><small> &copy; Copyright 2023 ClothMart. All Rights Reserved</small> </i>
+       </div>
+    </div>
+
+    <div class="Guanteed-text">
+        <h5>Guaranteed Secured Payments</h5>
+  
+     </div>
+
+ </footer>
+
+ 
+  <!-- Container For FooterPayments Setion Start -->
+  <div class="container-fluid LogoPayments">
+    <div class="row">
+
+          <div class="col-lg-3 col-md-2 col-sm-12 payment-brands">
+            <img src="Pictures/Visa-Blue.jpg" alt="">
+          </div>
+          <div class="col-lg-3 col-md-2 col-sm-12 payment-brands">
+            <img src="Pictures/PCI-Logo.jpg" alt="">
+          </div>
+          <div class="col-lg-3 col-md-2 col-sm-12 payment-brands">
+            <img src="Pictures/Mastercard-logo.jpg" alt="">
+          </div>
+          <div class="col-lg-3 col-md-2 col-sm-12 payment-brands">
+            <img src="Pictures/VerifiedbyVisa logo.jpg" alt="">
+          </div>
+    </div>
+    <!-- Row section end -->
+
+  </div>
+  <!-- Container For FooterPayments Setion End -->
+
+
+
+  <script src="shoppers.js"></script>
+  <script src="./JavaScript/sidenav.js"></script>
+<script>
+    let loader = document.querySelector('#Preloader');
+
+    window.addEventListener('load', ()=>{
+        loader.style.display= "none";
+    })
+</script>
+
+
+
+<script>
+    
+    let dropdown = document.querySelector('.button-nav');
+    let dropdwn2 = document.querySelector('.btn-nav2')
+    
+    dropdown.addEventListener('click', ()=>{
+        dropdown.classList.toggle('active');
+
+    })
+
+    dropdwn2.addEventListener('click', ()=>{
+        dropdwn2.classList.toggle('active')
+    })
+</script>
+
+
+
+<!-- view item details modal -->
+<script>
+    let viewSection= document.querySelector('.bg-view-section');
+    let viewBtn= document.querySelector('.viewMore');
+    let closeView= document.querySelector('.close-view');
+
+    viewBtn.addEventListener('click', ()=>{
+        viewSection.style.display = 'flex';
+    })
+
+    closeView.addEventListener('click', ()=>{
+        viewSection.style.display = 'none';
+    })
+</script>
+<!-- view item details modal -->
+
+
+
+<!-- CART APPEAR SECTION START -->
+<script>
+    let cartAppear = document.querySelector('.bg-cart-wrapper-appear');
+    let cartShow = document.querySelector("#CART");
+    let cartClosed = document.querySelector('.cartClose');
+
+
+cartShow.addEventListener('click', ()=>{
+    cartAppear.style.display= "flex";
+})
+
+cartClosed.addEventListener('click', ()=>{
+    cartAppear.style.display = "none"
+
+})
+
+    
+// CART APPEAR MODAL END
+</script>
+
+    
+
+    <script>
+
+     function  search(){
+            let Filter = document.querySelector('#search').value.toUpperCase();
+
+            let item = document.querySelectorAll('.product');
+
+            let pname = document.getElementsByTagName('h3');
+
+            for(let i=0; i <= pname.length; i++){
+
+                let a= item[i].getElementsByTagName('h3')[0];
+
+                let value= a.innerHTML || a.innerText || a.textContent;
+              
+                if(value.toUpperCase().indexOf(Filter) > -1){
+                    item[i].style.display= "";
+
+                }else{
+                    item[i].style.display= "none";
+                }
+
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+<script>
+    
+    //  INSIDE THE  CART SECTION JS START--------------------------------------------
+    let CartButtons = document.querySelectorAll(".add-2-cart");
+       let Cart = document.querySelector("#CART");
+
+
+       let products =[
+
+           {
+            name: "Zara Tshirt",
+            tag: "zaratshirt",
+            price: 180,
+            inCart: 0
+           },
+
+           {
+            name: "NASA tshirt",
+            tag: "nasatshirt",
+            price: 400,
+            inCart: 0
+           },
+
+           {
+            name: "Blue Jeans",
+            tag: "bluejeans",
+            price: 400,
+            inCart: 0
+           },
+
+           {
+            name: "Jordan Tshirt",
+            tag: "jordantshirt",
+            price: 700,
+            inCart: 0
+           },
+
+           {
+            name: "Raw Tshirt",
+            tag: "rawtshirt",
+            price: 600,
+            inCart: 0
+           },                                                                             
+
+
+           {
+            name: "Tropica shorts",
+            tag: "tropicashorts",
+            price: 150,
+            inCart: 0
+           },
+
+           {
+            name: "Striped Tshirt",
+            tag: "stripedtshirt",
+            price: 180,
+            inCart: 0
+           },
+
+           {
+            name: "Lakers Tshirt",
+            tag: "lakerstshirt",
+            price: 300,
+            inCart: 0
+           },
+
+           {
+            name: "Khaki Shorts",
+            tag: "khakishorts",
+            price: 150,
+            inCart: 0
+           },
+
+           {
+            name: "Poplin Skirt",
+            tag: "poplinskirt",
+            price: 450,
+            inCart: 0
+           },
+
+           {
+            name: "Men Old Khakhi",
+            tag: "menoldkhakhi",
+            price: 600,
+            inCart: 0
+           },
+
+           {
+            name: "Women Denim",
+            tag: "womendenim",
+            price: 400,
+            inCart: 0
+           },
+
+           {
+            name: "Leather Skirt",
+            tag: "leatherskirt",
+            price: 500,
+            inCart: 0
+           },
+
+           {
+            name: "Nike Navy",
+            tag: "nikenavy",
+            price: 650,
+            inCart: 0
+           },
+
+           {
+            name: "2pac Tshirt",
+            tag: "2pactshirt",
+            price: 250,
+            inCart: 0
+           },
+
+           {
+            name: "Northface Jackie",
+            tag: "northfacejackie",
+            price: 660,
+            inCart: 0
+           },
+           
+           {
+            name: "Squared Tshirt",
+            tag: "squaredtshirt",
+            price: 120,
+            inCart: 0
+           },
+
+           {
+            name: "Aaliyah Tshirt",
+            tag: "aaliyahtshirt",
+            price: 200,
+            inCart: 0
+           },
+
+           {
+            name: "Floral Blouse",
+            tag: "floralblouse",
+            price: 140,
+            inCart: 0
+           },
+
+           {
+            name: "Croptop Mango",
+            tag: "croptopmango",
+            price: 300,
+            inCart: 0
+           },
+
+           {
+            name: "Adidas Maroon",
+            tag: "adidasmaroon",
+            price: 300,
+            inCart: 0
+           },
+
+           {
+            name: "Floral Skirt",
+            tag: "floralskirt",
+            price: 400,
+            inCart: 0
+           },
+
+           {
+            name: "Gucci Backpack",
+            tag: "guccibackpack",
+            price: 4000,
+            inCart: 0
+           },
+
+           {
+            name: "Northface Bennie",
+            tag: "northfacebennie",
+            price: 220,
+            inCart: 0
+           },
+
+           {
+            name: "Purple Dress",
+            tag: "purpledress",
+            price: 450,
+            inCart: 0
+           },
+
+           {
+             name: "Blouse Stripes",
+             tag: "blousestripes",
+             price: 280,
+             inCart: 0
+           },
+
+           {
+            name: "Biggie Tshirt",
+            tag: "biggietshirt",
+            price: 280,
+            inCart: 0
+           },
+
+           {
+            name: "Plaid Skirt",
+            tag: "plaidskirt",
+            price: 250,
+            inCart: 0
+           },
+
+           {
+            name: "Patch Ladies Blue Jeans",
+            tag: "patchladiesbluejeans",
+            price: 400,
+            inCart: 0
+           },
+
+           {
+            name: "Ace Sweater",
+            tag: "acesweater",
+            price: 450,
+            inCart: 0
+           },
+
+           {
+            name: "Fur Denim",
+            tag: "furdenim",
+            price: 650,
+            inCart: 0
+           },
+
+           {
+            name: "Patch Work Ladies Jeans",
+            tag: "patchworkladiesjeans",
+            price: 450,
+            inCart: 0
+           },
+       ]
+
+       for ( let i = 0; i < CartButtons.length; i ++ ){
+           CartButtons[i].addEventListener('click', ()=>{
+            cartNumbers(products[i]);
+            totalCost(products[i]);
+           })
+    }
+
+
+    // FUNCTION FOR ONLOAD EVENT THAT USEFUL FOR NOT LOSING DATA AFTER REFRESHING THE PAGE!!!!!!!!
+    function onLoadCartNumbers(){
+        let productNumbers = localStorage.getItem('cartNumbers');
+
+        if(productNumbers){
+            document.querySelector('#CART span').textContent= productNumbers;
+        }
+
+    }
+    // FUNCTION FOR ONLOAD EVENT THAT USEFUL FOR NOT LOSING DATA AFTER REFRESHING THE PAGE!!!!!!!!
+
+    function cartNumbers(product){
+        // PRODUCTNUMBERS ARE EQUAL TO CARTNUMBERS!!!!!!!!!!!!!!!
+        let productNumbers = localStorage.getItem('cartNumbers');
+        // PRODUCTNUMBERS ARE EQUAL TO CARTNUMBERS!!!!!!!!!!!!!!!
+
+        // PRODUCTNUMBERS CONVERTED FROM A STRING TO A NUMBER!!!!!!!!!!!!!
+        productNumbers= parseInt(productNumbers)
+        // PRODUCTNUMBERS CONVERTED FROM A STRING TO A NUMBER!!!!!!!!!!!!!
+
+
+
+ // IF A PRODUCT IS ALREADY ADDED THEN ADD TO THE SUM THAT WILL EQUAL INFINITE NUMBER OF TIMES!!!!!!!!
+         if(productNumbers){
+            localStorage.setItem('cartNumbers', productNumbers + 1);
+            document.querySelector('#CART span').textContent= productNumbers + 1;
+
+ 
+         }else{
+            localStorage.setItem('cartNumbers', 1);
+            document.querySelector('#CART span').textContent= 1;
+         }
+ // IF A PRODUCT IS ALREADY ADDED THEN ADD TO THE SUM THAT WILL EQUAL INFINITE NUMBER OF TIMES!!!!!!
+
+
+        setItems(product);
+    }
+
+
+
+    // FUNCTION FOR SETTING THE PRODUCT NAMES IN A CART !!!!!!!!!!!!!!!!!!!!!
+    function setItems(product){
+        let cartItems = localStorage.getItem('ProductsInCart');
+        cartItems= JSON.parse(cartItems);
+         console.log("My cartItems are", cartItems);
+
+
+        //  AN IF STATEMENT FOR INCART INCREASE!!!!!!!!!!!!
+        if(cartItems != null){
+
+            if(cartItems[product.tag] == undefined){
+                cartItems = {
+                    ...cartItems, [product.tag] : product
+                }
+
+            }
+            cartItems[product.tag].inCart += 1;
+        }else
+        {
+            product.inCart= 1;
+
+            cartItems = {
+              [product.tag]:product
+                   }
+        }
+        //  AN IF STATEMENT FOR INCART INCREASE!!!!!!!!!!!!
+        localStorage.setItem('ProductsInCart', JSON.stringify(cartItems));
+     
+
+    }
+    // FUNCTION FOR SETTING THE PRODUCT NAMES IN A CART!!!!!!!!!!!!!!!!!!!!!!
+
+
+    // FUNCTION FOR THE TOTALCOST!!!!!!!!!!!!!!!!!
+
+    function totalCost(product){
+
+        let cartCost = localStorage.getItem('totalCost')
+        
+
+        if(cartCost != null){
+        cartCost = parseInt(cartCost);
+
+     localStorage.setItem("totalCost", cartCost + product.price)
+
+        }else{
+      localStorage.setItem("totalCost", product.price);
+
+        }
+
+
+    }
+    // FUNCTION FOR THE TOTALCOST!!!!!!!!!!!!!!!!!
+
+  
+    function displayCart(){
+        let cartItems = localStorage.getItem('ProductsInCart');
+        cartItems = JSON.parse(cartItems);
+
+        let Products= document.querySelector(".products");
+
+        if(cartItems && Products){
+            Products.innerHTML= '';
+            Object.values(cartItems).map(item =>{
+
+                Products.innerHTML +=`
+
+                 <div class="product-title">
+                <i class="fa-solid fa-circle-xmark"></i>
+                 <img src= "./Pictures/${item.tag}.jpg">
+
+                    <span>${item.name}</span>
+                     </div>
+
+                    <div class= "price-title">
+                     <span>${item.price}</span>
+                        </div>
+                        </div>
+
+
+                `
+                
+            })
+        }
+
+    }
+
+    onLoadCartNumbers();
+    displayCart();
+
+
+    //  INSIDE THE  CART SECTION JS END-----------------------------------------------
+
+
+
+</script>
+
+
+
+</body>
+</html>

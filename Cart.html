@@ -1,0 +1,2267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart||ClothMart</title>
+
+
+    <!-- Bootscrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootscrap Link -->
+
+
+    <!--Fontawesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Fontawesome link  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+
+
+        
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Poppins:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+
+    <!-- SWEETALERT LINK START -->
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+    <!-- SWEETALERT LINK End -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+Garamond&family=Poppins:wght@300&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+
+
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Gentium+Plus&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Cormorant+Garamond&family=Poppins:wght@300&family=Roboto:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap');
+
+
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        background-color: #ddd;
+        scroll-behavior: smooth;
+
+    }
+
+    #Container-cart {
+        width: 100%;
+        height: 99vh;
+        position: relative;
+
+    }
+
+.cart_preloader{
+     position: fixed;
+     background-color: #fff;
+     width: 100%;
+     height: 100vh;
+     z-index: 2400;
+
+
+}
+
+.cart_preloader img{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+     display: flex;
+
+}
+
+
+
+.menu-Btn{
+     visibility: hidden;
+     opacity: 0;
+     display: none;
+}
+
+#Side_navbar{
+    visibility: hidden;
+    opacity: 0;
+    display: none;
+}
+
+
+.banner-hero{
+    background: url(./Pictures/paintbanner.jpg);
+    width: 100%;
+    height: 250vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+ 
+    .cart_navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 12vh;
+        background-color: #fff;
+        box-shadow: 0.2rem 0.2rem 1rem #000;
+        z-index: 100;
+    }
+
+    .sideNavBar{
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+    }
+
+    #header {
+        margin: 15rem 53rem;
+        width: 70rem;
+        position: absolute;
+    }
+
+    #header h1 {
+        color: #000;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        text-shadow: 0.2rem 0.2rem 0, 6rem #000;
+    }
+
+
+    .cart-art-wrapper{
+        position: relative;
+        width: 100%;
+        height: 250vh;
+    }
+
+    .cart-art-wrapper img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+ 
+
+
+    #logo {
+       margin-top: 2.5rem;
+       display: flex;
+       justify-content: center;
+       margin: auto;
+       margin-left: 1rem;
+       position: relative;
+    }
+
+    #logo i{
+        color: orangered;
+        font-size: 1.4rem;
+        margin-top: 0.5rem;
+    }
+
+    #logo h5{
+        color: #000;
+        font-family: 'Rubik Moonrocks', sans-serif;
+        font-size: 2rem;
+        margin-left: -2rem;
+    }
+
+    #logo p{
+        font-family: 'Rancho', cursive;
+        font-size: 1.4rem;
+        margin-top: -0.8rem;
+         
+    }
+
+    #logo  span{
+        color: orangered;
+
+    }
+
+.fa-house{
+          margin-left: 2rem;
+    }
+
+.cart-wrapper{
+    position: absolute;
+    float: right;
+    right: 20rem;
+    margin-top: -1.7rem;
+}
+
+.cart-wrapper li{
+    list-style: none;
+}
+
+.cart-wrapper i{
+    font-size: 1.6rem;
+}
+
+.home-wrapper{
+    margin-top: -2.5rem;
+}
+
+.home-wrapper li{
+    list-style: none;
+}
+
+.home-wrapper i{
+    font-size: 1.6rem;
+
+
+}
+
+
+ .fa-cart-shopping{
+        margin-right: 2rem;
+    }
+
+   
+
+    .nav-content li {
+        margin: auto 8rem;
+        font-size: 1.5rem;
+        list-style: none;
+    }
+
+    #CART {
+        color: orangered;
+    }
+
+    .fa-house {
+        color: orangered;
+
+    }
+
+    #CART span {
+        font-size: 1rem;
+        padding: 1.1rem 0.9rem;
+        margin-top: -1rem;
+        color: #fff;
+        background-color: orangered;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        position: absolute;
+
+    }
+
+
+
+ .logo-text p{
+   font-size: 1.8rem;
+   text-align: center;
+   font-family: 'Rancho', cursive;
+   margin-top: -0.5rem;
+}
+
+
+
+.logo-text span{
+    color: orangered;
+}
+
+
+.cart-content{
+      margin-top: 7rem;
+      /* margin-top: -60rem; */
+      position: relative;
+}
+
+.Cart-BannerImgs{
+    position: absolute;
+    margin-left: 6rem;
+    margin-top: 4.5rem;
+}
+
+
+.Cart-BannerImgs img{
+     width: 24rem;
+     height: 40vh;
+}
+
+
+
+.cart_title-text {
+margin: 30rem 58rem;
+position: absolute;
+width: 20rem;
+}
+
+.cart_title-text p{
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    text-shadow: 0.1rem 0.1rem 0.8rem orangered;
+    text-transform: uppercase;
+}
+
+
+
+.products-container{
+    padding-left: 7rem;
+    margin-top: -50rem;
+    box-shadow: 0.2rem 0.2rem 0.3rem #000;
+    width: 99rem;
+    position: relative;
+    margin-left: 17rem;
+    background-color: #fff;
+    border-radius: 2rem;
+}
+
+
+
+
+    .product-header h5{
+        font-size: 1.8rem;
+        text-transform: uppercase;
+         font-family: 'Montserrat', sans-serif;
+         font-weight: bold;
+         position: relative;
+    }
+
+
+
+   
+
+    /* .products-container::-webkit-scrollbar{
+           display: none;
+    } */
+ 
+    .product{
+        position: relative;
+        margin-left: 10rem;
+    }
+
+    .product .remove{
+        font-size: 1.7rem;
+        cursor: pointer;
+        color: orangered;
+        margin-left: -2.8rem;
+        margin-top: -1.9rem;
+        position: absolute;
+        transition: 0.5s;
+    }
+
+    .product .remove:hover{
+        color: #000;
+    }
+
+
+.product span{
+        margin-left: 1.4rem;
+        margin-top: -5rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        font-family: 'Montserrat', sans-serif;
+
+    }
+
+   .price-title{
+     /* margin-left: 43rem; */
+    margin-top: -11.7rem;
+    position: absolute;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+   }
+
+ 
+
+   .total-title{
+    margin-left: 100rem;
+    position: absolute;
+    margin-top: -11.7rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+
+   }
+
+
+    .product-header {
+        display: flex;
+        width: 94%;
+        justify-content: flex-start;
+        /* margin: 0rem auto; */
+        padding-top: 3rem;
+        margin-top: 2rem;
+        border-bottom: 0.1rem solid grey;
+    }
+
+
+.emptycart{
+    display: flex;
+    margin-left: 2rem;
+}
+ 
+.emptycart p{
+    font-size: 2rem;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    margin-top: 14rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0.1rem 0.1rem 0.2rem #000;
+    color: red;
+    letter-spacing: 0.1rem;
+}
+
+.emptycart img{
+    width: 30rem;
+    height: 30rem;
+
+}
+
+.basketTotalContainer{
+    margin-top: 6rem;
+    margin-left: -6rem;
+
+}
+
+.checkOut{
+    width: 18rem;
+    height: 4.5rem;
+    border: none;
+    background-color: #d33f04;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 58rem;
+    margin-top: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 4rem;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 0.1rem 0.1rem 0.2rem #000;
+
+}
+
+.checkOut a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.checkOut:hover{
+    background-color: orangered;
+}
+
+.emoji{
+    width:3rem;
+    height: 3rem;
+    margin-top: 9rem;
+    margin-left: 11rem;
+    position: relative;
+}
+
+.emoji img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+  
+.row-cart{
+    border-bottom: 0.1rem solid lightslategray;
+}
+
+
+    .product-title {
+        width: 35%;
+        position: relative;
+        margin-left: 5.5rem;
+
+    }
+
+
+    .price {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        margin-left: 3rem;
+
+
+
+    }
+
+    .quantity{
+        width: 25%;
+        align-items: center;
+        display: flex;
+
+
+
+
+
+
+    }
+
+    .price-title{
+        margin-left: 35rem;
+        margin-top: -11.2rem;
+        /* color: red; */
+    }
+
+
+    .quantity-title{
+    margin-left: 12.7rem;
+    /* margin-top: 4rem; */
+    margin-top: 1.5rem;
+    position: absolute;
+    font-weight: 600;
+    font-size: 1.4rem;
+    font-family: 'Montserrat', sans-serif;
+
+
+   }
+
+   .quantity-title i{
+    position: absolute;
+
+   }
+   .quantity-title span{
+    position: absolute;
+    margin-left: 42.1rem;
+    margin-top: -13rem;
+
+   }
+
+.caret-wrapper{
+    position: relative;
+    margin-top: -3rem;
+    margin-left: 8rem;
+}
+
+
+.caret-wrapper i{
+    font-size: 1.8rem;
+    cursor: pointer;
+    position: absolute;
+}
+
+    .total{
+        width: 20%;
+        display: flex;
+        align-items: center;
+    }
+
+    .total-title{
+        margin-left: 70.5rem;
+    }
+
+    .product{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+        border-bottom: 0.1rem solid grey;
+        margin-bottom: 1.5rem;
+        margin: 4.5rem;
+    }
+
+    .product img {
+        width: 7rem;
+        height: 7rem;
+        align-items: center;
+        /* display: flex; */
+        box-shadow: 0.1rem 0.1rem 0.4rem #000;
+        margin-top: -3rem;
+        /* margin-bottom: 2rem; */
+
+    }
+
+    .basketTotalContainer{
+     margin-left: 68rem;
+    }
+
+
+    #fOOTER-CART {
+        background-color:#000;
+        /* opacity: .8; */
+        height: 65vh;
+        width: 100%;
+        z-index: 50;
+        position: relative;
+        /* margin-top: 12rem; */
+        margin-top: 52rem;
+    }
+
+
+    #fOOTER-CART .header h3{
+      color: #fff;
+      font-size: 1.8rem;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+
+    }
+
+    .nav-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .nav-footer li{
+        list-style: none;
+        margin: 1rem auto;
+    }
+
+    .nav-footer li a{
+        text-decoration: none;
+        color: #fff;
+        font-size:  1.3rem;
+        letter-spacing: 0.2rem;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+        transition: 0.5s;
+
+    }
+
+    .nav-footer li a:hover{
+        color: orangered;
+        border-bottom: 0.1rem solid orangered;
+    }
+
+
+
+    .payment-brandz {
+        width: 100%;
+        height: 10rem;
+        position: relative;
+        background-color: #fff;
+
+
+    }
+
+
+
+    .payment-brands {
+        width: 15rem;
+        height: 6rem;
+        position: relative;
+        margin-top: 1rem;
+        margin-left: 8rem;
+        border: none;
+
+
+
+    }
+
+    .payment-brands img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border: none;
+    }
+
+    .nav-footer i{
+        color: #fff;
+        transition: 0.5s;
+        font-size: 1.5rem;
+    }
+
+    
+    .nav-footer i:hover{
+        color: orangered;
+    }
+
+    .chck_out-btn{
+        position: absolute;
+        margin: 2rem auto;
+        display: none;
+      
+    }
+
+    .chck_out-btn button{
+        width: 13rem;
+        height: 3.2rem;
+        padding: 0rem 0.6rem;
+        background-color: #000;
+        font-size: 1.8rem;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s;
+
+    }
+
+    .chck_out-btn button a{
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        text-decoration: none;
+        text-shadow: 0.2rem 0.2rem 0.4rem orangered;
+    }
+
+    .chck_out-btn button:hover{
+        background-color: orangered;
+    }
+
+
+
+
+    
+
+/* SMALLER SCREENS SECTION START */
+
+@media screen and (max-width: 1340px){
+   body{
+      background-color: aqua;
+   }
+
+   .cart_title-text{
+       margin-left: 56rem;
+   }
+
+   .ad-cart-wrapper{
+     margin-left: -5rem;
+    height: 30rem;
+ 
+}
+
+.ad-cart-wrapper hr{
+   margin-right: -3rem;
+
+}
+
+}
+
+
+/* screens max of 1200px start */
+@media screen and (max-width: 1200px){
+
+       body{
+               background-color: red;
+            }
+
+
+ .fa-house{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+   }
+
+   .sideNavList .fa-house{
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    margin-left: 3rem;
+    font-size: 1.5rem;
+   }
+
+   .cart_title-text{
+       margin-left: 50rem;
+   }
+
+
+   .products-container {
+        margin: -55rem auto;
+     
+    }
+
+   
+
+
+
+
+#header{
+    margin-left: 45rem;
+
+}
+
+
+#header h1{
+ font-size: 3.8rem;
+
+
+}
+
+.ad-cart-wrapper{
+     margin-left: -2rem;
+    height: 45rem;
+    margin-top: 66rem;
+ 
+}
+
+
+
+
+.ad-cart-content iframe{
+    padding-left: 4rem;
+    width: 45rem;
+
+}
+.Cart-BannerImgs{
+    /* margin-top: 6.5rem; */
+    margin-left: -3rem;
+}
+
+
+#check-out_container{
+    margin-left: 58rem;
+}
+
+            
+ 
+#menu-Btn{
+        position: fixed;
+        width: 5rem;
+        height: 5rem;
+        background: transparent;
+        display: block;
+        left: 1rem;
+        top: 0.4rem;
+        cursor: pointer;
+        z-index: 3000;
+    }
+
+    .Hamburger{
+        margin-top: 1.3rem;
+        margin-left: 0.9rem;
+
+    }
+
+    .Hamburger .line{
+        background-color: orangered;
+        width: 2.5rem;
+        height: 0.2rem;
+        margin-top: 0.5rem;
+        border-radius: 0.3rem;
+        transition: 0.5s;
+    }
+
+    .Hamburger:hover .line{
+        background-color: rgb(199, 75, 30);
+    }
+
+    .Hamburger .line:nth-child(1){
+        width: 1.8rem; 
+    }
+    .Hamburger .line:nth-child(3){
+        width: 1.8rem; 
+    }
+
+    
+
+   
+/* SIDENAVBAR SECTION START------------ */
+
+.sideNavBar{
+    visibility: visible;
+    opacity: .9;
+    display: block;
+    z-index: 2000;
+
+}
+
+.sideNavBar{
+    position: fixed;
+    left: -55%;
+    top: 0;
+    height: 100vh;
+    width: 55%;
+    background: rgba(0, 0, 0, 0.9);
+    /* background-color: #000; */
+    /* opacity: .9; */
+    box-shadow: 0.1rem 0.1rem 0.4rem #000;
+    transition: all 0.5s;
+    
+}
+
+.closeNav{
+    position: absolute;
+    margin-top: -0.1rem;
+    margin-left: 2rem;
+    transform: rotate(45deg);
+    visibility: visible;
+    opacity: 1;
+
+}
+.closeNav span{
+   color: orangered;
+   font-size: 4.3rem;
+   transition: 0.5s;
+   z-index: 2600;
+
+
+}
+
+.closeNav:hover span{
+    color: #fff;
+
+
+}
+
+
+
+.sideNavList{
+    position: absolute;
+    top: 57%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sideNavList li{
+    display: block;
+    margin-block: 1.4rem;
+    list-style: none;
+    width: 40rem;
+    
+}
+
+.sideNavList li a{
+    text-decoration: none;
+    color: #ddd;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+.sideNavList li a:hover{
+    color: orangered;
+    border-bottom: 0.1rem solid orangered;
+}
+
+.sideNavList i{
+    margin-left: 8rem;
+    font-size: 2rem;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.sideNavList i:hover{
+    color: rgb(175, 50, 5);
+}
+
+
+
+
+.logo-sidenavbar{
+    bottom: 4rem;
+    position: absolute;
+    left: 0;
+    display: flex;
+
+}
+
+.logo-sidenavbar i{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-left: 10rem;
+}
+
+.logo-sidenavbar h3{
+    color: #fff;
+    font-size: 1.4rem;
+    margin-left: -1.8rem;
+}
+
+#fOOTER-CART{
+    margin-top: 65rem;
+}
+
+#copright-sidenav{
+    position: absolute;
+    bottom: 0;
+    left: 9rem;
+
+}
+
+#copright-sidenav i{
+    color: #fff;
+    font-size: 1.2rem;
+} 
+
+.copright{
+    margin: 7rem 2rem;
+    
+}
+
+
+.copright i{
+   color: #fff;
+   font-family: 'Poppins', sans-serif;
+   font-style: italic;
+  font-size: 1.3rem;
+    
+}
+
+
+    
+
+}
+/* screens max of 1200px End */
+
+
+
+
+/* SCREEN WIDTH OF 995PX START */
+
+@media screen and (max-width: 995px) {
+
+body {
+   background-color: yellow;
+   }
+  
+
+   .fa-cart-shopping{
+     margin-left: 20rem;
+   }
+
+
+ #logo{
+    margin-left: -20rem;
+ }
+
+   #header{
+    margin-left: 35rem;
+
+}
+
+.logo-sidenavbar{
+    margin-top: -2rem;
+}
+
+/* .product-header{
+   margin-left: 5rem;
+
+} */
+
+   .product-header h5{
+        font-size: 1.4rem;
+    
+    }
+
+    .products-container {
+        margin-top: -55rem;
+        padding-left: 9rem;
+         width: 80rem;
+
+
+    }
+
+  
+
+    .product{
+        margin-left: 4rem;
+    }
+
+    .product span{
+        width: 5rem;
+    }
+
+    .product hr{
+        margin-left: -11rem;
+    }
+
+    .price{
+        margin-left: 5.5rem;
+    }
+   
+.total{
+    margin-left: 3.4rem;
+}
+
+.quantity{
+    margin-left: 2rem;
+}
+
+    .price-title{
+        margin-left: 25rem;
+
+    }
+
+    .quantity-title{
+          margin-left: 0.3rem;
+    }
+
+    .total-title{
+        margin-left: 55rem;
+    }
+
+.cart-wrapper{
+    position: absolute;
+    float: right;
+    right: 4rem;
+    margin-top: -1.7rem;
+}
+
+
+.sideNavList{
+    position: absolute;
+    top: 57%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.basketTotalContainer{
+    margin-left: 53rem;
+}
+
+.cart_title-text{
+       margin-left: 40rem;
+   }
+
+
+   .checkOut{
+    margin-left: 40rem;
+   }
+
+   
+   .cart_title-text p{
+      font-size: 2.8rem;
+   }
+
+#header h1{
+ font-size: 3.4rem;
+
+
+}
+
+
+
+
+.Cart-BannerImgs{
+    margin-top: 6.5rem;
+    margin-left: -6rem;
+}
+
+.Cart-BannerImgs img{
+     width: 20rem;
+     height: 35vh;
+}
+
+.payment-brands {
+        width: 8rem;
+        height: 4rem;
+        position: relative;
+        background-color: #fff;
+        margin-top: 5rem;
+        margin-left: 11rem;
+
+
+    }
+
+    .payment-brands img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+    /* #check-out_container{
+        margin-left: 40rem;
+      
+    }
+
+    .Chck-out-content button{
+        width: 15rem;
+        height: 3.5rem;
+        margin-left: -10rem;
+
+    } */
+
+    .ad-cart-content{
+        display: flex;
+        flex-direction: column;
+        margin-left: 17rem;
+        max-width: 80rem;
+    }
+
+ .ad-cart-wrapper{
+    position: relative;
+    height: 40rem;
+    width: 100%;
+    margin-top: 60rem;
+    margin-left: 3rem;
+}
+
+
+    .ad-cart-content iframe{
+        width: 64rem;
+        margin-bottom: 6rem;
+    }
+
+    #fOOTER-CART{
+        margin-top: 60rem;
+    }
+
+
+}
+
+/* SCREEN WIDTH OF 995PX END */
+
+
+
+@media screen and (max-width: 768px){
+   
+body{
+   background-color: blue;
+}
+
+#header h1{
+      margin-left: -7rem;
+    }
+
+.sideNavList{
+    position: absolute;
+    top: 57%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+
+.remove{
+    position: absolute;
+}
+
+    .cart_title-text{
+       margin-left: 26rem;
+   }
+
+.product-header{
+    margin-left: -3rem;
+}
+
+.product{
+    margin-left: 1rem;
+    max-width: 38rem;
+}
+
+.product span{
+    width: 5rem;
+}
+   
+   .products-container {
+        max-width: 55rem;
+        /* margin: -25rem 5rem;
+        width: 65rem;
+        height: 130rem;
+        position: absolute;
+        padding-left: 7.5rem;
+        padding-right: 7.5rem; */
+    }
+
+
+
+    .Cart-BannerImgs img{
+     width: 16rem;
+     height: 30vh;
+}
+
+
+.Cart-BannerImgs{
+    margin-top: 7.5rem;
+    margin-left: -3rem;
+}
+
+/* CART FUNCTION CSS PROPERTIES */
+
+
+.product img{
+    width: 5rem;
+    height: 5rem;
+    /* margin-left: 2rem; */
+}
+
+
+
+.product span{
+  font-size: 1rem;
+  margin-left: 0.3rem;
+}
+
+
+.product-header h5{
+    font-size: 1rem;
+}
+
+
+.price-title{
+        margin-left: 12rem;
+        font-size: 1rem;
+        margin-top: -10rem;
+
+    }
+
+    .price{
+        margin-left: 3.1rem;
+        font-size: 1rem;
+    }
+
+
+/* 
+    .total-h5 {
+        width: 20%;
+        display: flex;
+        align-items: center;
+
+
+    } */
+
+    
+ 
+    .product-title{
+        margin-left: 2rem;
+        font-size: 1.4rem;
+        margin-top: 0.7rem;
+    }
+
+  
+    .quantity-title{
+        margin-left: -18.5rem;
+        margin-top: 2.6rem;
+        font-size: 1.2rem;
+    }
+
+    .quantity-title i{
+        font-size: 1.8rem;
+    }
+
+    .total-title{
+    font-size: 1rem;
+    margin-left: 33rem;
+    margin-top: -10.1rem;
+    }
+
+    /* .product-h5 span {
+        font-size: 1.2rem;
+       
+
+
+    } */
+
+    .price-h5 span{
+        /* font-size: 1.2rem; */
+        margin-left: 17rem;
+        margin-top: -11rem;
+     
+
+    }
+
+    .quantity-h5 span {
+        /* font-size: 1.2rem; */
+        margin-left: 30rem;
+        margin-top: -11.6rem;
+       
+
+    }
+
+    .total-h5 span {
+      
+        /* font-size: 1.2rem; */
+        margin-left: 40rem;
+        margin-top: -12rem;
+
+    }
+
+
+    .basketTotalContainer{
+        margin-left: 30rem;
+    }
+
+    .checkOut{
+        width: 15rem;
+        height: 4rem;
+        margin-left: 20rem;
+        padding-bottom: 0.8rem;
+        padding-top: 1rem;
+   
+    }
+    .checkOut a{
+        font-size: 1rem;
+
+    }
+
+    .basketTotalContainer h4{
+        font-size: 1.4rem;
+    }
+/* CART FUNCTION CSS PROPERTIES */
+
+
+
+    .payment-brands {
+        width: 9rem;
+        height: 4rem;
+        position: relative;
+        background-color: #fff;
+        margin-top: 2rem;
+        margin-left: 20rem;
+
+
+
+    }
+  
+
+    .payment-brands img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+
+    #check-out_container{
+        margin-left: -18rem;
+        margin-top: 40rem;
+        position: absolute;
+      
+    }
+
+    .Chck-out-content button{
+        width: 13rem;
+        height: 3.5rem;
+
+    }
+
+    .ad-cart-wrapper hr{
+        display: none;
+    }
+
+    .ad-cart-content{
+        margin-top: 60rem;
+        margin-left: 14rem;
+    }
+
+      .ad-cart-content iframe{
+      width: 40rem;
+      }
+   
+
+      #fOOTER-CART{
+        margin-top: 60rem;
+    }
+
+    
+   
+
+}
+
+
+
+/* SCREEN OF MAX-WIDTH 590PX START */
+@media screen and (max-width:590px){
+body{
+   background-color:  forestgreen;
+}
+
+#header{
+    margin-left: 18rem;
+
+}
+
+.logo-text p{
+    font-size: 1.5rem;
+}
+
+.sideNavList{
+    position: absolute;
+    top: 57%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+
+.product i{
+   font-size: 1rem;
+   margin-left: -4rem;
+}
+
+
+/* .product-header{
+    margin-left: 3.5rem;
+} */
+
+ .products-container {
+    width:100%;
+    border: none;
+    padding-left: 5rem;
+    
+    }
+
+    /* .product{
+       padding-left: 3rem;
+    } */
+
+        .product span{
+            font-size: 0.88rem;
+            margin-top: -2rem;
+            margin-left: 0.3rem;
+            font-weight: bold;
+        }
+
+.product img{
+    width: 4rem;
+    height: 4rem;
+}
+
+    
+
+.cart-wrapper{
+    margin-top: 0.2rem;
+}
+.Cart-BannerImgs{
+    width: 80%;
+    display: flex;
+}
+
+.Cart-BannerImgs img{
+     width: 15rem;
+     height: 11vh;
+}
+
+#header h1{
+ font-size: 2.2rem;
+ margin-left: 3rem;
+
+
+}
+
+
+
+.product-h5 img {
+        width: 4rem;
+        height: 4rem;
+    
+    }
+
+    .price-title{
+        margin-left: 15rem;
+        margin-top: -8rem;
+        font-size: 0.88rem;
+    }
+
+
+    
+    .quantity-title{
+      margin-left: -16rem;
+      margin-top: 5rem;
+    }
+
+
+
+
+    .quantity-title i{
+        font-size: 1.4rem;
+    }
+
+
+    .total-title{
+    margin-left: 32.4rem;
+    margin-top: -8rem;
+    font-size: 0.88rem;
+    }
+    
+    .quantity-title span{
+        font-size: 0.88rem;
+    }
+
+    
+    .product-h5 {
+        margin-left: 2rem;
+    }
+
+    .price-h5 span{
+   
+        margin-top: -9rem;
+     
+
+    }
+
+    .total-h5 span {
+        margin-top: -9rem;
+
+  }
+
+  .quantity-h5 span {
+    margin-top: -9rem;
+
+       
+
+    }
+
+    
+    .basketTotalContainer{
+        margin-left: 30rem;
+    }
+
+    .checkOut{
+        width: 15rem;
+        height: 4rem;
+        margin-left: 20rem;
+        padding-bottom: 0.8rem;
+        padding-top: 0.8rem;
+   
+    }
+
+
+    .ad-cart-content{
+        width: 4rem;
+        height: 4rem;
+        position: relative;
+        background-color: #fff;
+        margin-top:5rem;
+        margin-left: 19rem;
+
+
+    }
+
+    .payment-brands img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+
+
+
+
+    .Chck-out-content button{
+        width: 10rem;
+        font-size: 1.3rem;
+        height: 3rem;
+        margin-left: -30rem;
+
+    }
+
+
+    .logo-sidenavbar{
+    bottom: 4rem;
+    position: absolute;
+    left: 0;
+    display: flex;
+
+}
+
+.logo-sidenavbar i{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-left: 4rem;
+}
+
+/* .logo-sidenavbar h3{
+    color: #fff;
+    font-size: 1.4rem;
+    margin-left: -1.8rem;
+} */
+
+#copright-sidenav{
+    left: 2rem;
+
+}
+
+  
+}
+/* SCREEN OF MAX-WIDTH 590PX END */
+
+
+
+
+ 
+/* SMALLER SCREENS SECTION END */
+
+
+
+
+
+
+
+
+
+
+
+
+.product-h5 span{
+    margin-left: 0.4rem;
+}
+
+
+
+
+.Decrease,
+.Increase
+{
+    position: absolute;
+    transition: all 0.5s;
+    cursor: pointer;
+ 
+}
+
+
+
+.Decrease:hover,
+.Increase:hover{
+    color: #000;
+}
+
+
+.Decrease{
+    margin-left: 39rem;
+    margin-top: -13rem;
+    color: red;
+}
+
+.Increase{
+    margin-left: 44rem;
+    margin-top: -13rem;
+}
+
+.Decrease,
+.Increase{
+    position: absolute;
+    color: orangered;
+    font-size: 1.8rem;
+}
+
+
+.BasketTotalContainer{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-left: -17rem;
+    margin-top: 1.4rem;
+}
+
+.basketTotalTitle{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 25%;
+    position: absolute;
+    margin-left: -15rem;
+
+}
+
+.Total{
+    font-family: 'Poppins', sans-serif;
+     font-size: 1.7rem;
+     font-weight: 600;
+     margin-left: -9rem;
+     position: absolute;
+    
+}
+
+
+#Checkout-btn{
+    width: 18rem;
+    height: 4rem;
+    position: absolute;
+    background-color: rgb(184, 71, 30);
+    border: none;
+    margin: 4rem 50rem;
+    transition: all 0.5;
+}
+
+#Checkout-btn a{
+    font-size: 1.7rem;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1rem;
+}
+
+#Checkout-btn:hover{
+    background-color: #000;
+}
+
+#Checkout-btn ion-icon{
+    margin-top: 0.3rem;
+    margin-left: -1.2rem;
+    font-size: 2rem;
+    color: #fff;
+    position: absolute;
+}
+
+#footer-logo{
+    position: relative;
+    top: -55%;
+    left: 7%;
+    display: flex;
+
+}
+
+#footer-logo i{
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+#footer-logo li{
+   color: #fff;
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    margin-top: -0.8rem;
+    margin-left: 0.2rem;
+    text-shadow: 0.1rem 0.1rem 0.8rem orangered;
+
+}
+
+
+
+#indexloader span{
+    background-color: #fff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+}
+
+.fa-caret-left{
+    color: orangered;
+    font-size: 2rem;
+    margin-left: 40rem;
+    margin-top: -13rem;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+.fa-caret-right{
+    color: orangered;
+    font-size: 2rem;
+    margin-left: 44rem;
+    margin-top: -13rem;
+    position: absolute;
+    cursor: pointer;
+    transition: 0.5s;
+
+
+}
+
+.fa-caret-left:hover{
+    color: #000;
+}
+.fa-caret-right:hover{
+    color: #000;
+}
+
+
+
+
+
+
+
+
+.ad-cart-wrapper{
+    /* border: 0.1rem solid red; */
+    position: relative;
+    height: 40rem;
+    width: 100%;
+    margin-top: 20rem;
+}
+
+.ad-cart-wrapper hr{
+    width: 100%;
+    background-color: #000;
+    box-shadow: 0.1rem 0.1rem 0.3rem #000;
+    height: 0.2rem;
+}
+
+
+.ad-cart-content{
+    position: absolute;
+    padding-top: 8rem;
+    margin-left: 8rem;
+    display: flex;
+}
+
+
+
+
+.ad-cart-content iframe{
+    padding-left: 4rem;
+
+}
+
+
+/* empty cart section header */
+.previous{
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    border: none;
+    margin: -2.5rem 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: orangered;
+
+}
+
+.previous i{
+    font-size: 1.4rem;
+    padding: 0.78rem 0.85rem;
+    font-weight: bold;
+    color: #fff;
+    /* justify-content: center;
+    align-items: center;
+    display: flex;
+    position: absolute; */
+
+ 
+}
+
+
+
+</style>
+
+<body>
+
+    <div id="Container-cart">
+
+        <div class="cart_preloader">
+            <img src="./Pictures/precrtloder.gif" alt="">
+        </div>
+
+
+
+            <!-- <div class="preloader-cart">
+
+            </div> -->
+
+    
+
+        <div class="banner-hero">
+
+<!-- <div class="cart-art-wrapper">
+    <img src="./Pictures/paintbanner.jpg" alt="">
+</div> -->
+
+            <div class="cart_navbar">
+          
+                <div id="logo">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h5>Clothmart</h5>
+                </div>
+
+                <div class="logo-text">
+                    <p>shop <span>smart</span> with <span>clothmart</span></p>
+                </div>
+
+
+
+                 <!-- SIDENAVBAR FOR SMALLER SCREENS START -->
+                 <div class="sideNavBar">
+                    
+                
+                    <ul class="sideNavList">
+                        <a href="indexx.html"><i class="fa-solid fa-house" class="side_nav-Home"></i></a>
+                        <li><a href="#">Men Clothing</a></li>
+                        <li><a href="#">Women Clothing</a></li>
+                        <li><a href="#">Men Sneakers</a></li>
+                        <li><a href="#">Women Sneakers</a></li>
+                        <li><a href="#">Men Bags</a></li>
+                        <li><a href="#">Women Bags</a></li>
+                        <li><a href="#">HeadGear</a></li>
+                        <li><a href="#">Jewelery</a></li>
+                    </ul>
+                  
+                    <div class="logo-sidenavbar">
+                        <i class="fa-solid fa-cart-shopping"></i><h3>clothmart</h3>
+                    </div>
+    
+                    <div id="copright-sidenav">
+                        <i><small> &copy; Copyright 2023 ClothMart. All Rights Reserved</small> </i>
+                     </div>
+    
+                     <div class="closeNav">
+                        <span>+</span>
+                    </div>
+    
+                </div>
+                  <!-- SIDENAVBAR FOR SMALLER SCREENS END -->
+
+                  <div class="previous">
+                    <a href="#" onclick="history.back()"><i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+
+                    <div class="cart-wrapper">
+                        <li><i class="fa-solid fa-cart-shopping" id="CART"><sup><span>0</span></sup></i></li>
+                    </div>
+
+           
+                    <div id="menu-Btn">
+                        <div class="Hamburger">
+                    
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            <div class="line"></div>
+                            
+                           </div>
+    
+                             </div>
+                    <!-- MENUBUTTON WRAPPER END -->
+
+            </div>
+            <!-- NAVBAR SECTION END -->
+
+
+      <div class="bckgrnd">
+     
+
+      </div>
+
+
+    
+    </div>
+
+
+
+</div>
+  
+           
+
+
+
+        </div>
+        <!-- BANNER-HERO SECTION END -->
+
+
+        <div class="products-container">
+
+            <div class="product-header">
+
+                <h5 class="product-title">Product</h5>
+                <h5 class="price">Price</h5>
+                <h5 class="quantity">Quantity</h5>
+                <h5 class="total">Total</h5>
+
+            </div>
+
+                <div class="emptycart">
+                    <div class="emoji">
+                        <img src="./Pictures/sademoji.jpg" class="emoji">
+                    </div>
+                  <p>Your cart is empty</p><img src="./Pictures/emptyredcart.jpg" alt="">
+                </div>
+
+            <div class="products">
+           
+           
+            </div>
+
+
+
+            <!-- <div class="chck_out-btn">       
+                <button type="button" id="CheckBtn"><a href="#">checkout</a></button>
+               </div> -->
+
+              
+        </div>
+        <!-- PRODUCTS-CONTAINER SECTION  END -->
+
+
+
+
+        
+        <!-- <div class="container-fluid  ad-cart-content"> 
+          
+            <hr>
+
+            <div class="ad-cart-content">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/freRkr00otY?si=pVvwhZ-QzDypBHjw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>          
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dHYTo6Da2aA?si=MgIdx0yC7WmMbfIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            </div>
+
+        </div> -->
+    
+
+        <div id="fOOTER-CART">
+
+            <div class="header">
+                <h3>ClothMart</h3>
+            </div>
+
+            <div class="nav-footer">
+                <li><a href="Msneaker.html">Men Footwear</a></li>
+                <li><a href="Fsneaker.html">Women Footwear</a></li>
+                <li><a href="Men.html">Men Clothes</a></li>
+                <li><a href="Women.html">Women Clothes</a></li>
+                <li><a href="#">Men Bags</a></li>
+                <li><a href="BagsWomen.html">Boys Clothes</a></li>
+                <li><a href="BagsWomen.html">Girls Clothes</a></li>
+                <li><a href="BagsWomen.html">Boys Footwear</a></li>
+                <li><a href="BagsWomen.html">Girls Footwear</a></li>
+            </div>
+         
+
+        
+
+        </div>
+        <!-- FOOTER-CART SECTION END -->
+
+
+        <div class="payment-brandz">
+            <div class="row">
+
+
+                <div class="col-lg-3 col-md-2 col-sm-1">
+                    <div class="card payment-brands">
+                        <img src="Pictures/Visa-Blue.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-2 col-sm-1">
+                    <div class="card payment-brands ">
+                        <img src="Pictures/PCI-Logo.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-2 col-sm-1">
+                    <div class="card payment-brands">
+                        <img src="Pictures/Mastercard-logo.jpg" alt="">
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-2 col-sm-1">
+                    <div class="card payment-brands">
+                        <img src="Pictures/VerifiedbyVisa logo.jpg" alt="">
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- BRANDS PAYMENT  ROW-SECTION END -->
+                 
+        </div>
+        <!-- PAYMENT BRANDZ CONTAINER END -->
+
+
+    </div>
+    <!-- CONTAINER-CART SECTION END -->
+
+ 
+
+<script src="./JavaScript/cart.js"></script>
+<script src="./JavaScript/sidenav.js"></script>
+
+
+<!-- PRELODER OF THE WEBSITE -->
+<script>
+    let precrtloader= document.querySelector('.cart_preloader');
+
+    window.addEventListener('load', ()=>{
+        precrtloader.timeOut = setTimeout( ()=> precrtloader.remove(), 5000);
+    })
+</script>
+<!-- PRELOADER OF THE WEBSITE -->
+
+
+
+
+    <script>
+
+
+// CHECKOUT HIDDEN BUTTON
+
+// let productsContainer = document.querySelector('.products');
+// let checkoutBtn = document.querySelector('.chck_out-btn');
+
+// if(productsContainer.value ==''){
+//     checkoutBtn.style.display="none";
+// }else{
+//     checkoutBtn.style.display="flex";
+// }
+
+
+
+
+
+
+
+
+// CHECKOUT HIDDEN BUTTON
+
+
+    let HamBtn = document.querySelector('#menu-Btn');
+    let SideNavBar = document.querySelector('#Side_navbar');
+    let menuOpen = false;
+
+    HamBtn.onclick = function(){
+
+        SideNavBar.style.right == "-55%";
+
+        if(SideNavBar.style.right== "-55%"){
+            SideNavBar.style.right= "0";
+            menuOpen = false;
+          
+        }else{
+
+            SideNavBar.style.right= "-55%";
+            menuOpen = true;
+        
+
+        }
+
+       if(!menuOpen){
+        HamBtn.classList.add('open');
+        menuOpen = true;
+       }
+       else{
+             HamBtn.classList.remove('open');
+             menuOpen= false;
+       }
+     
+    }
+    </script>
+
+    <script>
+        let preloaderCart = document.querySelector(".preloader-cart");
+
+        window.addEventListener('load', ()=>{
+            preloaderCart.remove();
+        })
+    </script>
+
+
+
+
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
